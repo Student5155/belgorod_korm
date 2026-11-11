@@ -4,250 +4,326 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#1F4A33">
-<title>Белгородские корма — Башкортостан</title>
-<meta name="description" content="Единственный официальный дилер «Белгородских кормов» в Республике Башкортостан. Комбикорма для птицы и животных, БВМК. От 1 кг до 10 тонн.">
+<title>Белгородские корма в Башкортостане</title>
+<meta name="description" content="Единственный официальный дилер «Белгородских кормов» в Республике Башкортостан. Склад в Месягутово. Комбикорма, БВМК, зерно, жмыхи и добавки от 1 кг до 10 тонн.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&family=PT+Serif:wght@700&display=swap">
 <style>
-body{margin:0}img{max-width:100%}[hidden]{display:none!important}
-/* Layout: каталог-первый; узкая колонка 1180px, sticky-шапка, нижняя панель действий на телефоне */
+/* Структура: фото-герой во всю ширину / полоса фактов / заявление / каталог «комбикорма» (аккордеон строк) /
+   фото-лента + каталог «зерно и добавки» (колонки) / дилер (тёмная полоса) / условия (липкая колонка) / контакты (сплит) */
 :root{
-  --bg:#F3EFE3; --surface:#FBF9F2; --surface-2:#EDE7D6; --ink:#1D2820; --muted:#5B655C; --line:#DAD3C0;
-  --green:#1F4A33; --green-hover:#2A5E42; --on-green:#F7F3E7; --gold:#A27C33; --gold-soft:#ECE0C1;
-  --bag:#E4D7B8; --bag-line:#C9B98F; --focus:#A27C33;
+  --bg:#F3EFE3; --surface:#FBF9F2; --surface-2:#EAE4D2; --ink:#1D2820; --muted:#59645A; --line:#D8D0BB;
+  --green:#1F4A33; --green-hover:#2A5E42; --on-green:#F7F3E7; --gold:#9A752E; --gold-soft:#ECE0C1;
+  --deep:#17372A; --deep-ink:#EFEADB; --deep-muted:#B9C2B4; --deep-line:#2E5442;
+  --focus:#A27C33;
   --f-display:"PT Serif",Georgia,"Times New Roman",serif;
   --f-body:"Golos Text",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
-  --r:10px; --wrap:1180px;
+  --wrap:1320px; --gut:clamp(16px,3.6vw,48px); --sec:clamp(72px,10vw,136px);
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#131A15; --surface:#1A231D; --surface-2:#212C24; --ink:#ECE7D9; --muted:#A4AB9E; --line:#2F3B32;
+  --bg:#131A15; --surface:#19221C; --surface-2:#212C24; --ink:#ECE7D9; --muted:#A6AD9F; --line:#2F3B32;
   --green:#3B7553; --green-hover:#468763; --on-green:#F7F3E7; --gold:#D3AE64; --gold-soft:#3A3221;
-  --bag:#3A3428; --bag-line:#574E3B; --focus:#D3AE64; color-scheme:dark}}
+  --deep:#0E1611; --deep-ink:#ECE7D9; --deep-muted:#A6AD9F; --deep-line:#26352B; --focus:#D3AE64; color-scheme:dark}}
 :root[data-theme="dark"]{
-  --bg:#131A15; --surface:#1A231D; --surface-2:#212C24; --ink:#ECE7D9; --muted:#A4AB9E; --line:#2F3B32;
+  --bg:#131A15; --surface:#19221C; --surface-2:#212C24; --ink:#ECE7D9; --muted:#A6AD9F; --line:#2F3B32;
   --green:#3B7553; --green-hover:#468763; --on-green:#F7F3E7; --gold:#D3AE64; --gold-soft:#3A3221;
-  --bag:#3A3428; --bag-line:#574E3B; --focus:#D3AE64; color-scheme:dark}
+  --deep:#0E1611; --deep-ink:#ECE7D9; --deep-muted:#A6AD9F; --deep-line:#26352B; --focus:#D3AE64; color-scheme:dark}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:76px}
-body{background:var(--bg);color:var(--ink);font:16px/1.55 var(--f-body);-webkit-text-size-adjust:100%;padding-bottom:calc(64px + env(safe-area-inset-bottom,0px))}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 var(--f-body);-webkit-text-size-adjust:100%;padding-bottom:calc(68px + env(safe-area-inset-bottom,0px))}
 @media (min-width:900px){body{padding-bottom:0}}
-body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:40;background:var(--surface)}
-.wrap{max-width:var(--wrap);margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
-h1,h2,h3{margin:0;text-wrap:balance}
-h2{font:700 clamp(26px,3.6vw,36px)/1.15 var(--f-display);letter-spacing:-.01em}
-h3{font-size:18px;font-weight:600;line-height:1.3}
+img{max-width:100%;display:block}
+[hidden]{display:none!important}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-left:max(var(--gut),env(safe-area-inset-left,0px));padding-right:max(var(--gut),env(safe-area-inset-right,0px))}
+h1,h2,h3{margin:0}
 p{margin:0}
 a{color:inherit}
-:focus-visible{outline:3px solid var(--focus);outline-offset:2px;border-radius:4px}
-.eyebrow{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px;border-radius:3px}
+.eyebrow{display:block;font-size:12.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
 .muted{color:var(--muted)}
 .num{font-variant-numeric:tabular-nums}
+/* плотные заголовки: межстрочный 0.86, трекинг в минус, блок стремится к прямоугольнику */
+.display{font-family:var(--f-display);font-weight:700;line-height:.88;letter-spacing:-.025em;text-wrap:balance}
+h2.display{font-size:clamp(34px,4.6vw,64px)}
+.lead{font-size:clamp(17px,1.6vw,20px);line-height:1.5;color:var(--muted);max-width:46ch}
 
-/* buttons */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:0 20px;border-radius:8px;border:1px solid transparent;font:600 15px/1 var(--f-body);text-decoration:none;cursor:pointer;transition:background-color .15s,border-color .15s,color .15s;white-space:nowrap}
+/* кнопки: минимализм */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;border-radius:4px;border:1px solid transparent;font:600 15px/1 var(--f-body);text-decoration:none;cursor:pointer;white-space:nowrap;transition:background-color .2s,border-color .2s,color .2s}
 .btn-primary{background:var(--green);color:var(--on-green)}
 .btn-primary:hover{background:var(--green-hover)}
-.btn-ghost{background:transparent;color:var(--ink);border-color:var(--line)}
-.btn-ghost:hover{border-color:var(--green);color:var(--green)}
-:root[data-theme="dark"] .btn-ghost:hover{color:var(--ink)}
-.btn-gold{background:var(--gold-soft);color:var(--ink);border-color:transparent}
-.btn-gold:hover{border-color:var(--gold)}
-.btn-sm{min-height:38px;padding:0 14px;font-size:14px}
+.btn-line{background:transparent;color:var(--ink);border-color:currentColor}
+.btn-line:hover{background:var(--ink);color:var(--bg)}
+.btn-sm{min-height:40px;padding:0 16px;font-size:14px}
 .btn svg{width:18px;height:18px;flex:none}
-.link-btn{background:none;border:0;padding:0;font:inherit;color:var(--green);font-weight:600;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .link-btn{color:var(--gold)}}
-:root[data-theme="dark"] .link-btn{color:var(--gold)}
+.tlink{background:none;border:0;padding:6px 0;font:600 15px var(--f-body);color:var(--ink);cursor:pointer;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:5px;transition:text-decoration-color .2s,color .2s}
+.tlink:hover{color:var(--green);text-decoration-thickness:2px}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .tlink:hover{color:var(--gold)}}
+:root[data-theme="dark"] .tlink:hover{color:var(--gold)}
+.plate{display:inline-block;font-size:12.5px;line-height:1;padding:6px 9px;border-radius:3px;background:var(--surface-2);white-space:nowrap}
+.plates{display:flex;flex-wrap:wrap;gap:6px}
 
-/* header */
-.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:var(--surface);border-bottom:1px solid var(--line)}
-.top .wrap{display:flex;align-items:center;gap:16px;min-height:64px}
+/* шапка */
+.top{position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--surface) 92%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+.top .wrap{display:flex;align-items:center;gap:20px;min-height:64px}
 .logo{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0}
-.logo-mark{width:36px;height:36px;flex:none}
-.logo b{display:block;font:700 17px/1.1 var(--f-display)}
+.logo-mark{width:34px;height:34px;flex:none}
+.logo b{display:block;font:700 17px/1.1 var(--f-display);letter-spacing:-.01em}
 .logo small{display:block;font-size:12px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.nav{display:flex;gap:4px;margin-left:auto}
-.nav a{padding:8px 12px;border-radius:6px;text-decoration:none;font-weight:500;font-size:15px;color:var(--muted);transition:color .15s,background-color .15s}
-.nav a:hover{color:var(--ink);background:var(--surface-2)}
+.nav{display:flex;gap:2px;margin-left:auto}
+.nav a{padding:8px 12px;text-decoration:none;font-weight:500;font-size:15px;color:var(--muted);transition:color .2s}
+.nav a:hover{color:var(--ink)}
 .top-phone{font-weight:600;text-decoration:none;white-space:nowrap}
-.cart-btn{position:relative}
 .badge{min-width:22px;height:22px;padding:0 6px;border-radius:11px;background:var(--gold);color:#fff;font-size:12px;font-weight:700;display:inline-grid;place-items:center}
-.menu-btn{display:none;margin-left:auto;width:44px;height:44px;border:1px solid var(--line);border-radius:8px;background:transparent;color:var(--ink);cursor:pointer}
-@media (max-width:899px){
+.menu-btn{display:none;margin-left:auto;width:44px;height:44px;border:1px solid var(--line);border-radius:4px;background:transparent;color:var(--ink);cursor:pointer}
+@media (max-width:959px){
   .menu-btn{display:grid;place-items:center}
   .top-phone,.top .cart-btn{display:none}
-  .nav{position:absolute;left:0;right:0;top:100%;flex-direction:column;gap:0;background:var(--surface);border-bottom:1px solid var(--line);padding:8px max(16px,env(safe-area-inset-right,0px)) 16px max(16px,env(safe-area-inset-left,0px));
-    opacity:0;transform:translateY(-6px);visibility:hidden;transition:opacity .18s,transform .18s,visibility 0s .18s}
-  .nav.open{opacity:1;transform:none;visibility:visible;transition:opacity .18s,transform .18s}
-  .nav a{padding:14px 4px;font-size:17px;color:var(--ink);border-bottom:1px solid var(--line);border-radius:0}
+  .nav{position:absolute;left:0;right:0;top:100%;flex-direction:column;gap:0;background:var(--surface);border-bottom:1px solid var(--line);padding:8px var(--gut) 16px;
+    opacity:0;transform:translateY(-6px);visibility:hidden;transition:opacity .2s,transform .2s,visibility 0s .2s}
+  .nav.open{opacity:1;transform:none;visibility:visible;transition:opacity .2s,transform .2s}
+  .nav a{padding:14px 2px;font-size:17px;color:var(--ink);border-bottom:1px solid var(--line)}
 }
 
-/* hero */
-.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
-.hero-field{position:absolute;inset:-20% 0 -20% 0;pointer-events:none;opacity:.5;will-change:transform}
-.hero .wrap{position:relative;padding-block:48px 40px;display:grid;gap:28px}
-.hero h1{font:700 clamp(32px,6vw,58px)/1.06 var(--f-display);letter-spacing:-.015em;max-width:15ch}
-.hero .lead{font-size:clamp(17px,2.2vw,20px);color:var(--muted);max-width:44ch}
-.hero-cta{display:flex;flex-wrap:wrap;gap:12px}
-.facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--line);padding-top:20px;gap:16px}
-.fact b{display:block;font:700 22px/1.2 var(--f-display)}
+/* 1. герой: фото во всю ширину в родных пропорциях, заголовок в спокойной зоне неба справа сверху */
+.hero{position:relative;overflow:hidden;background:#C9CCCB;height:min(calc(100vw / 1.975),82svh)}
+.hero-img{position:absolute;inset:0;will-change:transform}
+.hero-img img{width:100%;height:100%;object-fit:cover;object-position:50% 0}
+.hero-copy{position:absolute;top:3vw;right:2.4vw;width:28vw;color:#18231B;display:grid;gap:1vw}
+.hero-copy::before{content:"";position:absolute;inset:-3vw -3vw -3vw -4vw;z-index:-1;background:radial-gradient(closest-side,rgba(232,234,233,.78),rgba(232,234,233,0));pointer-events:none}
+.hero h1{font-size:3.45vw}
+.hero .eyebrow{color:#5E4A1E;font-size:max(11px,.78vw)}
+.hero-bar{background:var(--surface);border-bottom:1px solid var(--line)}
+.hero-bar .wrap{display:flex;flex-wrap:wrap;gap:16px 40px;align-items:center;justify-content:space-between;padding-block:26px}
+.hero-bar .sub{font-size:clamp(17px,1.4vw,20px);line-height:1.45;max-width:52ch}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center}
+@media (max-width:899px){
+  .hero{height:auto;background:var(--bg)}
+  .hero-img{position:relative;inset:auto;height:clamp(240px,58vw,500px);overflow:hidden}
+  .hero-img img{object-position:12% 30%}
+  .hero-copy{position:relative;top:auto;right:auto;width:auto;color:var(--ink);padding:30px var(--gut) 0;gap:14px}
+  .hero-copy::before{display:none}
+  .hero h1{font-size:clamp(40px,11vw,64px)}
+  .hero .eyebrow{color:var(--gold);font-size:12.5px}
+  .hero-bar{background:var(--bg);border-bottom:0}
+  .hero-bar .wrap{padding-block:16px 32px}
+  .hero-bar .sub{color:var(--muted)}
+}
+/* 2. полоса фактов на всю ширину */
+.facts{border-bottom:1px solid var(--line);background:var(--surface)}
+.facts .wrap{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.fact{padding:26px 24px 26px 0;display:grid;gap:4px;align-content:start}
+.fact+.fact{border-left:1px solid var(--line);padding-left:24px}
+.fact b{font:700 clamp(20px,2.2vw,30px)/1 var(--f-display);letter-spacing:-.02em}
 .fact span{font-size:14px;color:var(--muted)}
-@media (max-width:700px){.facts{grid-template-columns:repeat(2,minmax(0,1fr))}.hero .wrap{padding-block:32px 28px}}
+@media (max-width:760px){.facts .wrap{grid-template-columns:repeat(2,minmax(0,1fr))}.fact:nth-child(3){border-left:0;padding-left:0}.fact:nth-child(n+3){border-top:1px solid var(--line)}}
 
-/* sections */
-section.block{padding-block:56px}
-.head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:12px 24px;margin-bottom:24px}
-.head p{max-width:56ch}
+/* 3. заявление: асимметричный разворот */
+.state{padding-block:var(--sec)}
+.state .wrap{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:clamp(32px,6vw,96px);align-items:end}
+.state h2{font-size:clamp(36px,5vw,72px)}
+.state-text{display:grid;gap:22px;align-content:end}
+.state-text p{font-size:18px;line-height:1.6;max-width:44ch}
+@media (max-width:860px){.state .wrap{grid-template-columns:minmax(0,1fr)}}
 
-/* exclusive band */
-.excl{background:var(--surface-2);border-bottom:1px solid var(--line)}
-.excl .wrap{display:grid;grid-template-columns:56px minmax(0,1fr) auto;gap:16px 20px;align-items:center;padding-block:24px}
-.excl-mark{width:56px;height:56px}
-.excl h2{font-size:clamp(20px,2.6vw,26px)}
-.excl p{margin-top:6px;color:var(--muted);max-width:70ch}
-@media (max-width:760px){.excl .wrap{grid-template-columns:44px minmax(0,1fr)}.excl-mark{width:44px;height:44px}.excl .btn{grid-column:1/-1;justify-self:start}}
+/* 4. каталог А: подзаголовок слева, строки справа (без карточек) */
+.cat-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px 64px;align-items:end;padding-bottom:36px}
+.cat-head .lead{justify-self:end}
+@media (max-width:860px){.cat-head{grid-template-columns:minmax(0,1fr)}.cat-head .lead{justify-self:start}}
+.tools{display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center;padding:18px 0;border-top:1px solid var(--ink);border-bottom:1px solid var(--line);margin-bottom:8px}
+.search{position:relative;flex:1 1 320px;max-width:520px}
+.search input{width:100%;height:48px;border:0;border-bottom:1px solid var(--line);background:transparent;color:var(--ink);font:16px var(--f-body);padding:0 8px 0 32px;border-radius:0}
+.search input:focus{outline:none;border-bottom-color:var(--ink)}
+.search svg{position:absolute;left:2px;top:14px;width:20px;height:20px;color:var(--muted)}
+.jump{display:flex;flex-wrap:wrap;gap:8px 20px}
+.jump a{font-size:15px;font-weight:500;color:var(--muted);text-decoration:none;padding:6px 0;border-bottom:1px solid transparent;transition:color .2s,border-color .2s}
+.jump a:hover{color:var(--ink);border-bottom-color:var(--ink)}
+.part{display:grid;grid-template-columns:minmax(200px,300px) minmax(0,1fr);gap:16px clamp(24px,4vw,64px);padding:44px 0;border-bottom:1px solid var(--line)}
+.part-title{font:700 clamp(26px,2.6vw,36px)/.92 var(--f-display);letter-spacing:-.02em}
+.part-title small{display:block;margin-top:10px;font:500 14px/1.4 var(--f-body);letter-spacing:0;color:var(--muted)}
+@media (max-width:860px){.part{grid-template-columns:minmax(0,1fr);padding:32px 0}}
+details.grp{border-top:1px solid var(--line);interpolate-size:allow-keywords}
+details.grp:first-child{border-top:0}
+details.grp::details-content{block-size:0;overflow:hidden;transition:block-size .3s ease,content-visibility .3s allow-discrete}
+details.grp[open]::details-content{block-size:auto}
+details.grp>summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 16px;align-items:center;padding:18px 0}
+details.grp>summary::-webkit-details-marker{display:none}
+.grp-name{font-weight:600;font-size:19px;transition:color .2s}
+details.grp>summary:hover .grp-name{color:var(--green)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) details.grp>summary:hover .grp-name{color:var(--gold)}}
+.grp-sub{grid-column:1;font-size:14px;color:var(--muted)}
+.grp-n{grid-row:1/3;grid-column:2;display:flex;align-items:center;gap:12px;font-size:14px;color:var(--muted)}
+.plus{width:28px;height:28px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;transition:transform .25s,border-color .2s}
+.plus svg{width:12px;height:12px}
+details[open]>summary .plus{transform:rotate(45deg);border-color:var(--ink)}
+.rows{padding:0 0 18px}
+.row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px 24px;align-items:center;padding:14px 0 14px 16px;border-left:2px solid var(--line);transition:border-color .2s,background-color .2s}
+.row+.row{margin-top:2px}
+.row:hover{border-left-color:var(--gold);background:color-mix(in srgb,var(--surface-2) 45%,transparent)}
+.row-name{background:none;border:0;padding:0;text-align:left;font:600 15.5px/1.4 var(--f-body);color:var(--ink);cursor:pointer}
+.row-name:hover{text-decoration:underline;text-underline-offset:4px}
+.row-main{display:grid;gap:8px;min-width:0}
+.row-code{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.row-act{display:flex;gap:16px;align-items:center;padding-right:8px}
+@media (max-width:640px){.row{grid-template-columns:minmax(0,1fr)}.row-act{justify-content:space-between}}
+.in-cart{background:var(--gold-soft)!important;color:var(--ink)!important;border-color:var(--gold)!important}
+.empty{padding:40px 0;font-size:17px}
 
-/* catalog */
-.tools{display:grid;gap:12px;margin-bottom:16px}
-.search{position:relative}
-.search input{width:100%;height:50px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink);font:16px var(--f-body);padding:0 16px 0 44px}
-.search svg{position:absolute;left:14px;top:15px;width:20px;height:20px;color:var(--muted)}
-.chips{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;scrollbar-width:thin}
-.chip{flex:none;height:38px;padding:0 14px;border:1px solid var(--line);border-radius:19px;background:var(--surface);color:var(--ink);font:500 14px var(--f-body);cursor:pointer;transition:border-color .15s,background-color .15s}
-.chip:hover{border-color:var(--green)}
-.sec-title{display:flex;align-items:baseline;gap:10px;margin:28px 0 10px;font:700 22px/1.2 var(--f-display)}
-.sec-title span{font:500 14px var(--f-body);color:var(--muted)}
-details.cat{border:1px solid var(--line);border-radius:var(--r);background:var(--surface);margin-bottom:10px;interpolate-size:allow-keywords}
-details.cat::details-content{block-size:0;overflow:hidden;transition:block-size .25s ease,content-visibility .25s allow-discrete}
-details.cat[open]::details-content{block-size:auto}
-details.cat>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:14px;padding:14px 16px;min-height:64px}
-details.cat>summary::-webkit-details-marker{display:none}
-.cat-ico{width:40px;height:40px;flex:none;border-radius:8px;background:var(--gold-soft);display:grid;place-items:center;font:700 15px var(--f-display);color:var(--ink)}
-.cat-name{font-weight:600;font-size:17px}
-.cat-sub{font-size:14px;color:var(--muted)}
-.chev{margin-left:auto;width:22px;height:22px;flex:none;color:var(--muted);transition:transform .2s}
-details[open]>summary .chev{transform:rotate(180deg)}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px;padding:4px 16px 16px}
-.card{display:flex;flex-direction:column;gap:10px;padding:14px;border:1px solid var(--line);border-radius:8px;background:var(--bg);min-width:0}
-.card-top{display:flex;gap:12px}
-.bag{width:52px;height:64px;flex:none}
-.card h3{font-size:15px;font-weight:600;line-height:1.35}
-.meta{display:flex;flex-wrap:wrap;gap:6px}
-.tag{font-size:12.5px;line-height:1;padding:6px 8px;border-radius:5px;background:var(--surface-2);color:var(--ink);white-space:nowrap}
-.tag.code{font-variant-numeric:tabular-nums;letter-spacing:.01em}
-.price{font-size:14px;color:var(--muted)}
-.price b{color:var(--ink);font-size:16px}
-.card-actions{display:flex;gap:8px;margin-top:auto}
-.card-actions .btn{flex:1;min-width:0}
-.in-cart{background:var(--gold-soft)!important;color:var(--ink)!important}
-.empty{padding:28px;text-align:center;border:1px dashed var(--line);border-radius:var(--r)}
+/* 5. фото-лента во всю ширину + каталог Б колонками */
+.band{position:relative;overflow:hidden;height:clamp(300px,38vw,520px);background:#5A3A22}
+.band-img{position:absolute;inset:-18% 0;will-change:transform}
+.band-img img{width:100%;height:100%;object-fit:cover}
+.band::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(18,14,8,.72),rgba(18,14,8,.25) 60%,rgba(18,14,8,0))}
+.band .wrap{position:relative;z-index:1;height:100%;display:grid;align-content:end;padding-bottom:clamp(28px,4vw,56px);gap:16px;color:#F5EFE2}
+.band .eyebrow{color:#E7C987}
+.band h2{font-size:clamp(40px,6vw,92px);max-width:9.5ch}
+.band p{max-width:44ch;color:#E9E1CF;font-size:18px}
+.raw{padding-block:clamp(48px,6vw,80px) var(--sec)}
+.cols{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:40px clamp(24px,3vw,48px)}
+@media (max-width:1060px){.cols{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.cols{grid-template-columns:minmax(0,1fr)}}
+.col h3{font:700 22px/.95 var(--f-display);letter-spacing:-.015em;padding-bottom:14px;border-bottom:1px solid var(--ink);margin-bottom:4px}
+.col ul{list-style:none;margin:0;padding:0}
+.col li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 12px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line)}
+.col li .plates{grid-column:1/-1}
+.col .both{font-size:12.5px;color:var(--gold);font-weight:600}
+.add-mini{background:none;border:1px solid var(--line);border-radius:4px;height:36px;padding:0 12px;font:600 13.5px var(--f-body);color:var(--ink);cursor:pointer;transition:border-color .2s,background-color .2s;white-space:nowrap}
+.add-mini:hover{border-color:var(--ink)}
 
-/* trust */
-.split{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:24px}
-@media (max-width:860px){.split{grid-template-columns:minmax(0,1fr)}}
-.panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:22px;display:grid;gap:14px;align-content:start}
-.cert{position:relative;background:var(--surface);border:1px solid var(--gold);border-radius:var(--r);padding:24px 22px;display:grid;gap:14px}
-.cert-seal{width:64px;height:64px}
-.kv{display:grid;grid-template-columns:auto minmax(0,1fr);gap:8px 16px;font-size:15px}
-.kv dt{color:var(--muted)}
+/* 6. дилер: тёмная полоса */
+.dealer{background:var(--deep);color:var(--deep-ink);padding-block:var(--sec)}
+.dealer .eyebrow{color:#D3AE64}
+.dealer .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(40px,7vw,120px)}
+@media (max-width:900px){.dealer .wrap{grid-template-columns:minmax(0,1fr)}}
+.dealer h2{font-size:clamp(36px,4.6vw,66px);margin:14px 0 36px}
+.kv{display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px 28px;font-size:16px;margin:0}
+.kv dt{color:var(--deep-muted)}
 .kv dd{margin:0;font-weight:500}
-.checks{display:grid;gap:10px;margin:0;padding:0;list-style:none}
-.checks li{display:grid;grid-template-columns:22px minmax(0,1fr);gap:10px}
-.checks svg{width:22px;height:22px;color:var(--green)}
-:root[data-theme="dark"] .checks svg{color:var(--gold)}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .checks svg{color:var(--gold)}}
-.map{border-radius:var(--r);border:1px solid var(--line);background:var(--surface);overflow:hidden}
+.dealer .btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
+.dealer .btn-line{color:var(--deep-ink)}
+.dealer .btn-line:hover{background:var(--deep-ink);color:var(--deep)}
+.dealer .btn-primary{background:#D3AE64;color:#17241B}
+.dealer .btn-primary:hover{background:#E0BF7C}
+.orig h3{font:700 26px/1 var(--f-display);letter-spacing:-.015em;margin-bottom:8px}
+.orig ol{list-style:none;margin:0;padding:0;counter-reset:o}
+.orig li{counter-increment:o;display:grid;grid-template-columns:52px minmax(0,1fr);gap:16px;padding:20px 0;border-bottom:1px solid var(--deep-line);color:var(--deep-ink)}
+.orig li::before{content:counter(o,decimal-leading-zero);font:700 22px/1.2 var(--f-display);color:#D3AE64}
+
+/* 7. условия: липкая колонка слева, крупные строки справа */
+.terms{padding-block:var(--sec)}
+.terms .wrap{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(40px,6vw,104px);align-items:start}
+@media (max-width:900px){.terms .wrap{grid-template-columns:minmax(0,1fr)}}
+.terms-side{position:sticky;top:96px;display:grid;gap:22px}
+@media (max-width:900px){.terms-side{position:static}}
+.map{border:1px solid var(--line);border-radius:4px;background:var(--surface);overflow:hidden;margin-top:8px}
 .map svg{display:block;width:100%;height:auto}
+.tlist{margin:0}
+.tlist div{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:8px 32px;padding:28px 0;border-top:1px solid var(--line)}
+.tlist div:last-child{border-bottom:1px solid var(--line)}
+.tlist dt{font:700 clamp(24px,2.4vw,32px)/.95 var(--f-display);letter-spacing:-.02em}
+.tlist dd{margin:0;color:var(--muted);font-size:16.5px}
+@media (max-width:560px){.tlist div{grid-template-columns:minmax(0,1fr)}}
+.how{margin-top:56px}
+.how h3{font:700 24px/1 var(--f-display);letter-spacing:-.015em;margin-bottom:22px}
+.how ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;counter-reset:h}
+@media (max-width:640px){.how ol{grid-template-columns:minmax(0,1fr)}}
+.how li{counter-increment:h;display:grid;gap:8px;align-content:start}
+.how li::before{content:counter(h);width:40px;height:40px;border-radius:50%;border:1px solid var(--gold);display:grid;place-items:center;font:700 17px var(--f-display);color:var(--gold)}
+.how b{font-size:17px}
 
-/* terms */
-.terms{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
-@media (max-width:900px){.terms{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:480px){.terms{grid-template-columns:minmax(0,1fr)}}
-.term{padding:18px;border-top:3px solid var(--green);background:var(--surface);border-radius:0 0 8px 8px;display:grid;gap:6px;align-content:start}
-.term b{font:700 20px/1.2 var(--f-display)}
-.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:28px;counter-reset:s}
-@media (max-width:760px){.steps{grid-template-columns:minmax(0,1fr)}}
-.step{display:grid;grid-template-columns:40px minmax(0,1fr);gap:12px;align-items:start}
-.step::before{counter-increment:s;content:counter(s);width:40px;height:40px;border-radius:50%;border:1.5px solid var(--gold);display:grid;place-items:center;font:700 18px var(--f-display);color:var(--gold)}
-
-/* contacts */
-.contact-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:24px}
-@media (max-width:860px){.contact-grid{grid-template-columns:minmax(0,1fr)}}
-.phone-big{font:700 clamp(28px,4vw,38px)/1.1 var(--f-display);text-decoration:none;font-variant-numeric:tabular-nums}
+/* 8. контакты: сплит на всю ширину */
+.contacts{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);border-top:1px solid var(--line)}
+@media (max-width:900px){.contacts{grid-template-columns:minmax(0,1fr)}}
+.c-left{background:var(--gold-soft);padding:var(--sec) var(--gut);display:grid;gap:22px;align-content:start;justify-items:start}
+.c-right{background:var(--surface);padding:var(--sec) var(--gut)}
+@media (min-width:1400px){.c-left{padding-left:calc((100vw - var(--wrap))/2 + var(--gut))}.c-right{padding-right:calc((100vw - var(--wrap))/2 + var(--gut))}}
+.c-left h2{font-size:clamp(34px,4.2vw,58px)}
+.phone-big{font:700 clamp(34px,4.6vw,64px)/1 var(--f-display);letter-spacing:-.02em;text-decoration:none;font-variant-numeric:tabular-nums}
+.phone-big:hover{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:8px}
+.c-addr{display:grid;gap:4px;font-size:16.5px}
+.c-addr b{font-weight:600}
+.hours{display:grid;grid-template-columns:auto auto;gap:4px 24px;font-size:16px;margin:0}
+.hours dt{color:var(--muted)}.hours dd{margin:0;font-weight:500;font-variant-numeric:tabular-nums}
 .msgs{display:flex;flex-wrap:wrap;gap:10px}
-form{display:grid;gap:12px}
+form{display:grid;gap:16px;max-width:560px}
+.c-right h3{font:700 clamp(26px,2.6vw,34px)/.95 var(--f-display);letter-spacing:-.02em;margin-bottom:6px}
 .field{display:grid;gap:6px}
-.field label{font-size:14px;font-weight:500}
-.field input,.field textarea,.field select{width:100%;min-height:48px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);font:16px var(--f-body);padding:10px 14px}
-.field textarea{min-height:90px;resize:vertical}
+.field label{font-size:14px;font-weight:500;color:var(--muted)}
+.field input,.field textarea,.field select{width:100%;min-height:48px;border:1px solid var(--line);border-radius:4px;background:var(--bg);color:var(--ink);font:16px var(--f-body);padding:10px 14px;transition:border-color .2s}
+.field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--ink)}
+.field textarea{min-height:100px;resize:vertical}
 .row2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
 @media (max-width:520px){.row2{grid-template-columns:minmax(0,1fr)}}
 .radio{display:flex;gap:8px;flex-wrap:wrap}
-.radio label{display:flex;align-items:center;gap:8px;min-height:44px;padding:0 14px;border:1px solid var(--line);border-radius:8px;cursor:pointer;font-size:15px}
+.radio label{display:flex;align-items:center;gap:8px;min-height:44px;padding:0 14px;border:1px solid var(--line);border-radius:4px;cursor:pointer;font-size:15px}
 .radio input{accent-color:var(--green);width:18px;height:18px}
-.hint{font-size:13px;color:var(--muted)}
-.notice{font-size:14px;padding:12px 14px;border-radius:8px;background:var(--gold-soft)}
+.hint{font-size:13.5px;color:var(--muted)}
+.notice{font-size:14px;padding:12px 14px;border-radius:4px;background:var(--gold-soft)}
 
-footer{border-top:1px solid var(--line);padding-block:28px;font-size:14px;color:var(--muted)}
-footer .wrap{display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-between}
+footer{padding-block:32px;font-size:14px;color:var(--muted);border-top:1px solid var(--line)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px 40px;justify-content:space-between}
 
-/* mobile action bar */
+/* нижняя панель на телефоне */
 .bar{position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--surface);border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;
   padding:8px max(12px,env(safe-area-inset-right,0px)) calc(8px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px))}
 .bar .btn{min-height:48px;padding:0 8px;font-size:14px}
+.bar .btn-line{border-color:var(--line)}
 @media (min-width:900px){.bar{display:none}}
 
-/* dialogs */
-dialog{border:0;padding:0;background:var(--surface);color:var(--ink);max-width:min(760px,100vw - 32px);width:100%;max-height:min(88vh,900px);border-radius:12px}
+/* окна */
+dialog{border:0;padding:0;background:var(--surface);color:var(--ink);max-width:min(760px,100vw - 32px);width:100%;max-height:min(88vh,900px);border-radius:6px}
 dialog::backdrop{background:rgba(10,16,12,.55)}
-dialog[open]{animation:pop .18s ease-out}
+dialog[open]{animation:pop .22s ease-out}
 @keyframes pop{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
 .dlg{display:flex;flex-direction:column;max-height:inherit}
-.dlg-head{display:flex;gap:12px;align-items:flex-start;padding:18px 20px;border-bottom:1px solid var(--line)}
-.dlg-head h3{font:700 21px/1.25 var(--f-display)}
-.x{margin-left:auto;flex:none;width:40px;height:40px;border-radius:8px;border:1px solid var(--line);background:transparent;color:var(--ink);cursor:pointer;display:grid;place-items:center}
-.dlg-body{padding:18px 20px;overflow:auto;display:grid;gap:18px;min-height:0}
-.dlg-foot{padding:14px 20px calc(14px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);display:grid;gap:10px}
+.dlg-head{display:flex;gap:12px;align-items:flex-start;padding:20px 22px;border-bottom:1px solid var(--line)}
+.dlg-head h3{font:700 23px/1.05 var(--f-display);letter-spacing:-.015em;margin-top:6px}
+.x{margin-left:auto;flex:none;width:40px;height:40px;border-radius:4px;border:1px solid var(--line);background:transparent;color:var(--ink);cursor:pointer;display:grid;place-items:center}
+.dlg-body{padding:20px 22px;overflow:auto;display:grid;gap:20px;min-height:0}
+.dlg-foot{padding:14px 22px calc(14px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);display:grid;gap:10px}
 @media (max-width:640px){
-  dialog{max-width:100vw;margin:auto 0 0;border-radius:14px 14px 0 0;max-height:92vh}
-  dialog[open]{animation:sheet .2s ease-out}
-  @keyframes sheet{from{transform:translateY(24px);opacity:0}to{transform:none;opacity:1}}
+  dialog{max-width:100vw;margin:auto 0 0;border-radius:12px 12px 0 0;max-height:92vh}
 }
 #cartDlg{margin-right:0;margin-top:0;height:100%;max-height:100%;border-radius:0;max-width:min(460px,100vw)}
-@media (max-width:640px){#cartDlg{margin:auto 0 0;height:auto;max-height:94vh;border-radius:14px 14px 0 0}}
+@media (max-width:640px){#cartDlg{margin:auto 0 0;height:auto;max-height:94vh;border-radius:12px 12px 0 0}}
 .tbl-wrap{overflow-x:auto}
 table{border-collapse:collapse;width:100%;font-size:14.5px}
-th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th,td{text-align:left;padding:8px 10px 8px 0;border-bottom:1px solid var(--line);vertical-align:top}
 th{font-weight:500;color:var(--muted)}
-td.num{white-space:nowrap}
-.sub-h{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+.sub-h{font-size:12.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
 .picker{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;align-items:end}
-.stepper{display:flex;align-items:center;border:1px solid var(--line);border-radius:8px;height:48px;background:var(--bg)}
+.stepper{display:flex;align-items:center;border:1px solid var(--line);border-radius:4px;height:48px;background:var(--bg)}
 .stepper button{width:42px;height:100%;border:0;background:transparent;color:var(--ink);font-size:20px;cursor:pointer}
 .stepper input{width:56px;height:100%;border:0;background:transparent;text-align:center;color:var(--ink);font:600 16px var(--f-body);font-variant-numeric:tabular-nums;-moz-appearance:textfield}
 .stepper input::-webkit-outer-spin-button,.stepper input::-webkit-inner-spin-button{-webkit-appearance:none}
-.ci{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 12px;padding:14px 0;border-bottom:1px solid var(--line)}
+.ci{display:grid;gap:10px;padding:16px 0;border-bottom:1px solid var(--line)}
 .ci-name{font-weight:600;font-size:15px;line-height:1.35}
-.ci-ctrl{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
-.ci-ctrl select{height:44px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);font:15px var(--f-body);padding:0 10px;max-width:100%}
+.ci-ctrl{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.ci-ctrl select{height:44px;border:1px solid var(--line);border-radius:4px;background:var(--bg);color:var(--ink);font:15px var(--f-body);padding:0 10px;max-width:100%}
 .ci-ctrl .stepper{height:44px}
 .rm{margin-left:auto;background:none;border:0;color:var(--muted);cursor:pointer;font:14px var(--f-body);text-decoration:underline;padding:8px 0}
 .total{display:flex;justify-content:space-between;font-weight:600;font-size:16px}
-.toast{position:fixed;left:50%;bottom:calc(84px + env(safe-area-inset-bottom,0px));transform:translate(-50%,8px);z-index:60;background:var(--ink);color:var(--bg);padding:12px 16px;border-radius:8px;font-size:14.5px;max-width:calc(100vw - 32px);opacity:0;pointer-events:none;transition:opacity .2s,transform .2s}
+.toast{position:fixed;left:50%;bottom:calc(88px + env(safe-area-inset-bottom,0px));transform:translate(-50%,8px);z-index:60;background:var(--ink);color:var(--bg);padding:12px 16px;border-radius:4px;font-size:14.5px;max-width:calc(100vw - 32px);opacity:0;pointer-events:none;transition:opacity .2s,transform .2s}
 .toast.show{opacity:1;transform:translate(-50%,0)}
 @media (min-width:900px){.toast{bottom:24px}}
-@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}html{scroll-behavior:auto}}
+
+/* мягкое появление при прокрутке (только у отдельных элементов) */
+.rv{opacity:0;transform:translateY(18px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+.no-js .rv{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}html{scroll-behavior:auto}.rv{opacity:1;transform:none}}
 </style>
 </head>
 <body>
+
 <header class="top">
   <div class="wrap">
     <a class="logo" href="#top" aria-label="На главную">
-      <svg class="logo-mark" viewBox="0 0 36 36" aria-hidden="true"><rect width="36" height="36" rx="8" fill="var(--green)"/><path d="M18 27V12M18 16c-3-3-6-3-7-2 1 3 4 4 7 2Zm0 0c3-3 6-3 7-2-1 3-4 4-7 2Zm0 5c-3-3-6-3-7-2 1 3 4 4 7 2Zm0 0c3-3 6-3 7-2-1 3-4 4-7 2Z" fill="none" stroke="var(--gold-soft)" stroke-width="1.6" stroke-linejoin="round"/></svg>
-      <span><b>Белгородские корма</b><small>Единственный дилер в Башкортостане</small></span>
+      <svg class="logo-mark" viewBox="0 0 36 36" aria-hidden="true"><rect width="36" height="36" rx="6" fill="#1F4A33"/><path d="M18 27V12M18 16c-3-3-6-3-7-2 1 3 4 4 7 2Zm0 0c3-3 6-3 7-2-1 3-4 4-7 2Zm0 5c-3-3-6-3-7-2 1 3 4 4 7 2Zm0 0c3-3 6-3 7-2-1 3-4 4-7 2Z" fill="none" stroke="#ECE0C1" stroke-width="1.6" stroke-linejoin="round"/></svg>
+      <span><b>Белгородские корма</b><small>Официальный дилер в Башкортостане</small></span>
     </a>
     <nav class="nav" id="nav" aria-label="Разделы">
-      <a href="#catalog">Каталог</a><a href="#dealer">О дилере</a><a href="#terms">Доставка</a><a href="#contacts">Контакты</a>
+      <a href="#catalog">Комбикорма</a><a href="#raw">Зерно и добавки</a><a href="#dealer">О дилере</a><a href="#terms">Доставка</a><a href="#contacts">Контакты</a>
     </nav>
     <a class="top-phone num" data-tel href="#">8-987-047-79-95</a>
     <button class="btn btn-primary btn-sm cart-btn" type="button" data-open-cart>Заявка <span class="badge" data-count>0</span></button>
@@ -256,153 +332,173 @@ td.num{white-space:nowrap}
 </header>
 
 <main id="top">
-  <section class="hero">
-    <svg class="hero-field" id="field" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-      <g fill="none" stroke="var(--line)" stroke-width="1.5">
-        <path d="M-50 600 C 300 420 700 380 1250 330"/><path d="M-50 640 C 320 470 720 430 1250 390"/><path d="M-50 680 C 340 520 740 480 1250 450"/>
-        <path d="M-50 720 C 360 570 760 530 1250 510"/><path d="M-50 760 C 380 620 780 580 1250 570"/><path d="M-50 560 C 280 370 680 330 1250 270"/>
-        <path d="M-50 520 C 260 320 660 280 1250 210"/>
-      </g>
-    </svg>
+  <section class="hero" aria-label="Склад в Месягутово">
+    <div class="hero-img" id="heroImg"><img src="image/sklad.jpg" alt="Склад «Белгородские корма» в Месягутово: белое здание с баннером комбикормов" width="1280" height="648" fetchpriority="high"></div>
+    <div class="hero-copy rv">
+      <span class="eyebrow">Единственный официальный дилер в РБ</span>
+      <h1 class="display">Оригинальные<br>корма завода<br>только у&nbsp;нас</h1>
+    </div>
+  </section>
+  <div class="hero-bar">
     <div class="wrap">
-      <span class="eyebrow">Единственный официальный дилер в Республике Башкортостан</span>
-      <h1>Корма для вашего хозяйства от надёжного поставщика</h1>
-      <p class="lead">Подберём продукцию под ваши задачи и поможем оформить заказ.</p>
+      <p class="sub">Комбикорма, БВМК, зерно и добавки со склада в Месягутово. От 1 кг до 10 тонн, доставка по северо-востоку Башкортостана.</p>
       <div class="hero-cta">
         <a class="btn btn-primary" href="#catalog">Смотреть каталог</a>
-        <a class="btn btn-ghost" href="#contacts">Получить консультацию</a>
+        <a class="tlink" href="#contacts">Как нас найти</a>
       </div>
-      <div class="facts">
-        <div class="fact"><b class="num" id="factCount">49</b><span>позиций в каталоге</span></div>
-        <div class="fact"><b>1 кг — 10 т</b><span>любой объём заказа</span></div>
-        <div class="fact"><b>5 · 10 · 25 кг</b><span>фирменные мешки</span></div>
-        <div class="fact"><b>Северо-восток РБ</b><span>доставка по району</span></div>
+    </div>
+  </div>
+
+  <section class="facts" aria-label="Коротко">
+    <div class="wrap">
+      <div class="fact"><b class="num" id="factCount">58</b><span>позиций в каталоге</span></div>
+      <div class="fact"><b>1 кг / 10 т</b><span>от мешка до партии</span></div>
+      <div class="fact"><b>5 / 10 / 25 кг</b><span>фирменные мешки завода</span></div>
+      <div class="fact"><b>Месягутово</b><span>склад и самовывоз</span></div>
+    </div>
+  </section>
+
+  <section class="state" aria-labelledby="stateTitle">
+    <div class="wrap">
+      <div class="rv">
+        <span class="eyebrow">Почему у нас</span>
+        <h2 class="display" id="stateTitle" style="margin-top:16px">Завод работает<br>в Башкортостане<br>только через нас</h2>
+      </div>
+      <div class="state-text rv">
+        <p>«Белгородские корма» поставляют продукцию в республику через одного официального дилера. Мешки приходят на наш склад напрямую с завода, без перекупщиков и пересортицы.</p>
+        <p class="muted">Если корм этой марки предлагает другой продавец, позвоните нам, и мы поможем проверить, откуда товар.</p>
+        <div><a class="tlink" href="#dealer">Как отличить оригинал</a></div>
       </div>
     </div>
   </section>
 
-  <section class="excl" aria-labelledby="exclTitle">
+  <section id="catalog" aria-labelledby="catTitle" style="padding-bottom:var(--sec)">
     <div class="wrap">
-      <svg class="excl-mark" viewBox="0 0 56 56" aria-hidden="true"><circle cx="28" cy="28" r="26" fill="none" stroke="var(--gold)" stroke-width="2"/><text x="28" y="35" text-anchor="middle" font-size="22" font-weight="700" fill="var(--gold)" font-family="PT Serif,Georgia,serif">1</text></svg>
-      <div class="excl-text">
-        <h2 id="exclTitle">Единственный дилер «Белгородских кормов» в Башкортостане</h2>
-        <p>Завод «Белгородские корма» работает в Республике Башкортостан только через нас. Купить оригинальную продукцию завода в любом районе республики можно только у этого дилера. Если корм под этой маркой предлагает другой продавец, уточните у нас, откуда товар.</p>
-      </div>
-      <a class="btn btn-ghost" href="#dealer">Как проверить оригинал</a>
-    </div>
-  </section>
-
-  <section class="block" id="catalog">
-    <div class="wrap">
-      <div class="head">
-        <div><span class="eyebrow">Каталог</span><h2>Корма для птицы и животных</h2></div>
-        <p class="muted">Выберите вид животных — откройте категорию и посмотрите фасовку, назначение, состав и показатели. Цена зависит от объёма, менеджер рассчитает её за несколько минут.</p>
+      <div class="cat-head rv">
+        <div><span class="eyebrow">Каталог / блок 1</span><h2 class="display" id="catTitle" style="margin-top:16px">Комбикорма<br>и концентраты</h2></div>
+        <p class="lead">Многокомпонентные корма завода: полнорационные комбикорма, БВМК и рецепты под заказ. Подобраны под вид и возраст. Цену рассчитает менеджер, она зависит от объёма.</p>
       </div>
       <div class="tools">
         <div class="search">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-          <input id="q" type="search" placeholder="Поиск: бройлеры, несушки, ПК-5, свиньи…" aria-label="Поиск по каталогу" autocomplete="off">
+          <input id="q" type="search" placeholder="Поиск по всему ассортименту: бройлеры, ПК-5, ячмень" aria-label="Поиск по каталогу" autocomplete="off">
         </div>
-        <div class="chips" id="chips" role="list"></div>
+        <nav class="jump" id="jump" aria-label="Разделы каталога"></nav>
       </div>
-      <div id="cats"></div>
-      <div class="empty" id="noRes" hidden><p><b>Ничего не нашли.</b> Напишите менеджеру — подберём корм под ваше хозяйство.</p></div>
+      <div id="mix"></div>
+      <div class="empty" id="noRes" hidden><b>Ничего не нашли.</b> Напишите менеджеру, подберём корм под ваше хозяйство.</div>
     </div>
   </section>
 
-  <section class="block" id="dealer" style="background:var(--surface);border-block:1px solid var(--line)">
+  <section class="band" id="raw" aria-labelledby="rawTitle">
+    <div class="band-img" id="bandImg"><img src="image/len.jpg" alt="" decoding="async" width="1000" height="1000"></div>
     <div class="wrap">
-      <div class="head"><div><span class="eyebrow">О дилере</span><h2>Работаем напрямую с заводом</h2></div></div>
-      <div class="split">
-        <div class="cert">
-          <div style="display:flex;gap:16px;align-items:center">
-            <svg class="cert-seal" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="29" fill="none" stroke="var(--gold)" stroke-width="2"/><circle cx="32" cy="32" r="23" fill="none" stroke="var(--gold)" stroke-width="1" stroke-dasharray="2 3"/><path d="m22 33 7 7 13-15" fill="none" stroke="var(--gold)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <div><span class="eyebrow">Статус</span><h3 style="font:700 22px/1.2 var(--f-display)">Единственный официальный дилер «Белгородских кормов» в Республике Башкортостан</h3></div>
-          </div>
-          <dl class="kv">
-            <dt>Производитель</dt><dd>ООО «Белгородские корма», Белгородская обл., с. Котово</dd>
-            <dt>ИНН завода</dt><dd class="num">3128094470</dd>
-            <dt>Территория</dt><dd>Вся Республика Башкортостан — других дилеров завода в РБ нет</dd>
-            <dt>Точка продаж</dt><dd id="addr"></dd>
-            <dt>Режим работы</dt><dd id="hours"></dd>
-          </dl>
-          <div class="msgs">
-            <a class="btn btn-ghost btn-sm" href="https://belgorodkorma.ru/nashi-partnery/" target="_blank" rel="noopener">Проверить в списке партнёров завода</a>
-            <a class="btn btn-ghost btn-sm" id="routeBtn" href="#" target="_blank" rel="noopener">Проложить маршрут</a>
-          </div>
-        </div>
-        <div class="panel">
-          <h3>Как отличить оригинальный корм</h3>
-          <ul class="checks">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 4 4 10-10"/></svg><span>В Башкортостане корма завода продаёт только наш дилерский центр. Сомневаетесь в продавце — позвоните нам.</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 4 4 10-10"/></svg><span>Фирменный мешок «Белгородские корма» — 5, 10 или 25 кг.</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 4 4 10-10"/></svg><span>На мешке есть маркировка завода и код рецепта, например ПК-5-101-5.</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 4 4 10-10"/></svg><span>В документах — реквизиты производителя ООО «Белгородские корма».</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 4 4 10-10"/></svg><span>Корм выпускается по ГОСТ: срок хранения 6 месяцев со дня выработки.</span></li>
-          </ul>
-          <div class="map" aria-label="География поставок">
-            <svg viewBox="0 0 400 210" role="img" aria-label="Схема: доставка по северо-востоку Башкортостана, по согласованию — в другие районы и регионы">
-              <path d="M70 40 L160 22 L250 30 L330 58 L350 110 L320 170 L240 192 L150 185 L80 150 L52 95 Z" fill="var(--surface-2)" stroke="var(--line)" stroke-width="2"/>
-              <path d="M200 30 L250 30 L330 58 L345 100 L270 110 L210 80 Z" fill="var(--gold-soft)" stroke="var(--gold)" stroke-width="2"/>
-              <circle cx="275" cy="68" r="7" fill="var(--green)"/><circle cx="275" cy="68" r="13" fill="none" stroke="var(--green)" stroke-width="1.5" opacity=".5"/>
-              <text x="200" y="135" text-anchor="middle" font-size="13" fill="var(--muted)" font-family="Golos Text, sans-serif">Республика Башкортостан</text>
-              <text x="262" y="96" text-anchor="middle" font-size="12" font-weight="600" fill="var(--ink)" font-family="Golos Text, sans-serif">северо-восток</text>
-              <text x="200" y="204" text-anchor="middle" font-size="11" fill="var(--muted)" font-family="Golos Text, sans-serif">Схема условная</text>
-            </svg>
-          </div>
-        </div>
-      </div>
+      <span class="eyebrow">Каталог / блок 2</span>
+      <h2 class="display rv" id="rawTitle">Зерно, жмыхи и&nbsp;добавки</h2>
+      <p>Однокомпонентные корма и сырьё: для своих зерносмесей и для подкормки к комбикорму.</p>
+    </div>
+  </section>
+  <section class="raw" aria-label="Зерно, жмыхи и добавки: список">
+    <div class="wrap">
+      <div class="cols" id="rawList"></div>
+      <div class="empty" id="noRes2" hidden><b>В этом блоке ничего не нашли.</b></div>
     </div>
   </section>
 
-  <section class="block" id="terms">
+  <section class="dealer" id="dealer" aria-labelledby="dealerTitle">
     <div class="wrap">
-      <div class="head"><div><span class="eyebrow">Условия</span><h2>Заказ и доставка</h2></div><p class="muted">Объём заказа любой. Стоимость считаем от объёма: чем больше партия, тем ниже цена за килограмм.</p></div>
-      <div class="terms">
-        <div class="term"><b>От 1 кг до 10 т</b><span class="muted">Мешок для подворья или партия для фермы.</span></div>
-        <div class="term"><b>Северо-восток РБ</b><span class="muted">Доставляем по всему северо-восточному региону Башкортостана.</span></div>
-        <div class="term"><b>Другие города</b><span class="muted">При крупных объёмах — доставка в другие города и регионы по согласованию.</span></div>
-        <div class="term"><b>Цена от объёма</b><span class="muted">Назовите корм и количество — менеджер пришлёт расчёт.</span></div>
+      <div class="rv">
+        <span class="eyebrow">О дилере</span>
+        <h2 class="display" id="dealerTitle">Работаем<br>напрямую<br>с заводом</h2>
+        <dl class="kv">
+          <dt>Статус</dt><dd>Единственный официальный дилер ООО «Белгородские корма» в Республике Башкортостан</dd>
+          <dt>Производитель</dt><dd>ООО «Белгородские корма», Белгородская обл., с. Котово, ИНН <span class="num">3128094470</span></dd>
+          <dt>Склад</dt><dd id="addr"></dd>
+          <dt>График</dt><dd id="hoursShort"></dd>
+        </dl>
+        <div class="btns">
+          <a class="btn btn-primary" id="routeBtn" href="#" target="_blank" rel="noopener">Проложить маршрут</a>
+          <a class="btn btn-line" href="https://belgorodkorma.ru/nashi-partnery/" target="_blank" rel="noopener">Мы в списке партнёров завода</a>
+        </div>
       </div>
-      <div class="steps">
-        <div class="step"><div><h3>Соберите заявку</h3><p class="muted">Добавьте корма из каталога. Регистрация не нужна, заявка сохраняется в этом браузере.</p></div></div>
-        <div class="step"><div><h3>Отправьте менеджеру</h3><p class="muted">В WhatsApp или MAX в один клик, или позвоните.</p></div></div>
-        <div class="step"><div><h3>Получите расчёт</h3><p class="muted">Менеджер подтвердит наличие, цену и время доставки.</p></div></div>
+      <div class="orig rv">
+        <h3>Как отличить оригинальный корм</h3>
+        <ol>
+          <li><span>В Башкортостане корма завода продаёт только наш склад в Месягутово. Сомневаетесь в продавце, позвоните нам.</span></li>
+          <li><span>Фирменный мешок «Белгородские корма» на 5, 10 или 25 кг.</span></li>
+          <li><span>На мешке есть маркировка завода и код рецепта, например ПК-5-101-5.</span></li>
+          <li><span>В документах указаны реквизиты производителя ООО «Белгородские корма».</span></li>
+          <li><span>Корм выпускается по ГОСТ, срок хранения 6 месяцев со дня выработки.</span></li>
+        </ol>
       </div>
     </div>
   </section>
 
-  <section class="block" id="contacts" style="background:var(--surface);border-top:1px solid var(--line)">
+  <section class="terms" id="terms" aria-labelledby="termsTitle">
     <div class="wrap">
-      <div class="head"><div><span class="eyebrow">Контакты</span><h2>Связаться с менеджером</h2></div></div>
-      <div class="contact-grid">
-        <div class="panel" style="background:var(--bg)">
-          <span class="muted">Телефон менеджера</span>
-          <a class="phone-big" data-tel href="#">8-987-047-79-95</a>
-          <div class="msgs">
-            <button class="btn btn-ghost btn-sm" type="button" id="copyPhone">Скопировать номер</button>
-          </div>
-          <span class="muted" style="margin-top:6px">Мессенджеры</span>
-          <div class="msgs">
-            <a class="btn btn-primary" data-wa href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2c0 1.3.9 2.6 1.1 2.8.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>WhatsApp</a>
-            <a class="btn btn-gold" data-max href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 18V6l8 8 8-8v12"/></svg>MAX</a>
-          </div>
-          <p class="hint">Отвечаем в рабочее время. Можно прислать фото этикетки или опишите хозяйство — подберём корм.</p>
+      <div class="terms-side rv">
+        <span class="eyebrow">Условия</span>
+        <h2 class="display" id="termsTitle">Заказ<br>и доставка</h2>
+        <p class="muted">Чем больше партия, тем ниже цена за килограмм. Расчёт пришлёт менеджер.</p>
+        <div class="map" aria-label="География поставок">
+          <svg viewBox="0 0 400 210" role="img" aria-label="Схема: склад в Месягутово, доставка по северо-востоку Башкортостана, по согласованию в другие районы и регионы">
+            <path d="M70 40 L160 22 L250 30 L330 58 L350 110 L320 170 L240 192 L150 185 L80 150 L52 95 Z" fill="var(--surface-2)" stroke="var(--line)" stroke-width="2"/>
+            <path d="M200 30 L250 30 L330 58 L345 100 L270 110 L210 80 Z" fill="var(--gold-soft)" stroke="var(--gold)" stroke-width="2"/>
+            <circle cx="292" cy="70" r="7" fill="var(--green)"/><circle cx="292" cy="70" r="13" fill="none" stroke="var(--green)" stroke-width="1.5" opacity=".5"/>
+            <text x="292" y="52" text-anchor="middle" font-size="12" font-weight="600" fill="var(--ink)" font-family="Golos Text, sans-serif">Месягутово</text>
+            <text x="262" y="98" text-anchor="middle" font-size="12" fill="var(--ink)" font-family="Golos Text, sans-serif">северо-восток</text>
+            <text x="190" y="140" text-anchor="middle" font-size="13" fill="var(--muted)" font-family="Golos Text, sans-serif">Республика Башкортостан</text>
+            <text x="200" y="204" text-anchor="middle" font-size="11" fill="var(--muted)" font-family="Golos Text, sans-serif">Схема условная</text>
+          </svg>
         </div>
-        <form class="panel" id="askForm" novalidate>
-          <h3>Получить консультацию</h3>
-          <div class="row2">
-            <div class="field"><label for="askName">Имя</label><input id="askName" autocomplete="name" placeholder="Как к вам обращаться"></div>
-            <div class="field"><label for="askPhone">Телефон</label><input id="askPhone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7 900 000-00-00"></div>
-          </div>
-          <div class="field"><label for="askText">Вопрос</label><textarea id="askText" placeholder="Например: 300 бройлеров, нужен корм на весь цикл. Сколько выйдет с доставкой в Бирск?"></textarea></div>
-          <div class="msgs">
-            <button class="btn btn-primary" type="submit" data-via="wa">Отправить в WhatsApp</button>
-            <button class="btn btn-gold" type="button" data-via="max">Отправить в MAX</button>
-          </div>
-          <p class="hint" id="askHint">Сообщение откроется в мессенджере — останется нажать «Отправить».</p>
-        </form>
       </div>
+      <div>
+        <dl class="tlist rv">
+          <div><dt>От 1 кг до 10 т</dt><dd>Мешок для подворья или партия для фермы. Есть фасовка на развес.</dd></div>
+          <div><dt>Северо-восток РБ</dt><dd>Доставляем по всему северо-восточному региону Башкортостана.</dd></div>
+          <div><dt>Другие города</dt><dd>При крупных объёмах везём в другие города и регионы, по согласованию.</dd></div>
+          <div><dt>Самовывоз</dt><dd id="pickup"></dd></div>
+        </dl>
+        <div class="how">
+          <h3>Как заказать</h3>
+          <ol>
+            <li><b>Соберите заявку</b><span class="muted">Добавьте корма из каталога. Регистрация не нужна, заявка сохраняется в этом браузере.</span></li>
+            <li><b>Отправьте менеджеру</b><span class="muted">В WhatsApp или MAX в один клик, или просто позвоните.</span></li>
+            <li><b>Получите расчёт</b><span class="muted">Менеджер подтвердит наличие, цену и время доставки.</span></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contacts" id="contacts" aria-labelledby="contTitle">
+    <div class="c-left">
+      <span class="eyebrow">Контакты</span>
+      <h2 class="display" id="contTitle">Звоните,<br>пишите,<br>приезжайте</h2>
+      <a class="phone-big" data-tel href="#">8-987-047-79-95</a>
+      <div class="msgs">
+        <a class="btn btn-primary" data-wa href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2c0 1.3.9 2.6 1.1 2.8.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>WhatsApp</a>
+        <a class="btn btn-line" data-max href="#" target="_blank" rel="noopener">MAX</a>
+        <button class="btn btn-line" type="button" id="copyPhone">Скопировать номер</button>
+      </div>
+      <div class="c-addr"><b>Адрес склада</b><span id="addr2"></span><a class="tlink" id="routeBtn2" href="#" target="_blank" rel="noopener" style="justify-self:start">Открыть в Яндекс Картах</a></div>
+      <dl class="hours" id="hours"></dl>
+    </div>
+    <div class="c-right">
+      <form id="askForm" novalidate>
+        <h3>Получить консультацию</h3>
+        <p class="muted">Опишите хозяйство или пришлите фото этикетки, подберём корм.</p>
+        <div class="row2">
+          <div class="field"><label for="askName">Имя</label><input id="askName" autocomplete="name" placeholder="Как к вам обращаться"></div>
+          <div class="field"><label for="askPhone">Телефон</label><input id="askPhone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7 900 000-00-00"></div>
+        </div>
+        <div class="field"><label for="askText">Вопрос</label><textarea id="askText" placeholder="Например: 300 бройлеров, нужен корм на весь цикл. Сколько выйдет с доставкой?"></textarea></div>
+        <div class="msgs">
+          <button class="btn btn-primary" type="submit">Отправить в WhatsApp</button>
+          <button class="btn btn-line" type="button" data-via="max">Отправить в MAX</button>
+        </div>
+        <p class="hint" id="askHint">Сообщение откроется в мессенджере, останется нажать «Отправить».</p>
+      </form>
     </div>
   </section>
 </main>
@@ -410,14 +506,15 @@ td.num{white-space:nowrap}
 <footer>
   <div class="wrap">
     <span>Единственный официальный дилер ООО «Белгородские корма» в Республике Башкортостан</span>
+    <span id="footAddr"></span>
     <span class="num">8-987-047-79-95</span>
-    <span>Сведения о продукции — по данным производителя. Сайт не является публичной офертой.</span>
+    <span>Сведения о продукции по данным производителя. Сайт не является публичной офертой.</span>
   </div>
 </footer>
 
 <div class="bar">
-  <a class="btn btn-ghost" data-tel href="#">Позвонить</a>
-  <a class="btn btn-ghost" data-wa href="#" target="_blank" rel="noopener">WhatsApp</a>
+  <a class="btn btn-line" data-tel href="#">Позвонить</a>
+  <a class="btn btn-line" data-wa href="#" target="_blank" rel="noopener">WhatsApp</a>
   <button class="btn btn-primary" type="button" data-open-cart>Заявка <span class="badge" data-count>0</span></button>
 </div>
 
@@ -434,7 +531,7 @@ td.num{white-space:nowrap}
           <div class="field"><label for="oName">Имя</label><input id="oName" autocomplete="name"></div>
           <div class="field"><label for="oPhone">Телефон</label><input id="oPhone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7 900 000-00-00"></div>
         </div>
-        <div class="field"><label for="oPlace">Населённый пункт</label><input id="oPlace" placeholder="Например: Бирск"></div>
+        <div class="field"><label for="oPlace">Населённый пункт</label><input id="oPlace" placeholder="Например: Месягутово"></div>
         <div class="radio" role="radiogroup" aria-label="Получение">
           <label><input type="radio" name="get" value="Доставка" checked> Доставка</label>
           <label><input type="radio" name="get" value="Самовывоз"> Самовывоз</label>
@@ -445,13 +542,13 @@ td.num{white-space:nowrap}
     </div>
     <div class="dlg-foot">
       <div class="notice" id="orderMsg" hidden></div>
-      <div class="msgs" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px">
-        <a class="btn btn-primary" id="sendWa" href="#" target="_blank" rel="noopener">Отправить в WhatsApp</a>
-        <a class="btn btn-gold" id="sendMax" href="#" target="_blank" rel="noopener">Отправить в MAX</a>
+      <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px">
+        <a class="btn btn-primary" id="sendWa" href="#" target="_blank" rel="noopener">В WhatsApp</a>
+        <a class="btn btn-line" id="sendMax" href="#" target="_blank" rel="noopener">В MAX</a>
       </div>
       <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
-        <button class="link-btn" type="button" id="copyOrder">Скопировать текст заявки</button>
-        <button class="link-btn" type="button" id="clearCart">Очистить заявку</button>
+        <button class="tlink" type="button" id="copyOrder">Скопировать текст заявки</button>
+        <button class="tlink" type="button" id="clearCart">Очистить заявку</button>
       </div>
     </div>
   </div>
@@ -460,28 +557,31 @@ td.num{white-space:nowrap}
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script>
+const D={"P":[{"id":1,"s":"Комбикорм для птицы","c":"Бройлеры","n":"Комбикорм для цыплят бройлеров и кур-несушек от 1 до 7 дней (СТАРТ)","code":"ПК-0-101-3 кр. 2,0","f":"крупка 2,0 мм","a":"1–7 дней","p":[[5,250],[10,485],[25,1135]],"u":[["5","мешок 5 кг",5],["10","мешок 10 кг",10],["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"10, 25 кг","o":"10.91.10.186","sh":6,"nu":["12,3 МДж/кг","23,0–23,5","3,5–5,0","≤4,5","1,30–1,44","0,9–1,0","0,7–0,8","0,16–0,2","≤14"],"cm":"Зернобобовые, продукты переработки масличных культур, минеральное сырьё, синтетические аминокислоты, масло растительное, пробиотик, эмульгатор жиров, комплекс органических кислот, витаминно-минеральный комплекс. Введены: фитаза, комплексный фермент, антиоксидант, адсорбент микотоксинов.","nt":"","g2":"ГОСТ 18221-2018","g":{"mix":["Комбикорм для птицы","Бройлеры"]}},{"id":2,"s":"Комбикорм для птицы","c":"Бройлеры","n":"Комбикорм для цыплят бройлеров от 8 до 28 дней (РОСТ)","code":"ПК-5-101-5 гр. 2,0","f":"гранула 2,0 мм","a":"8–28 дней","p":[[5,230],[10,445],[25,1035]],"u":[["5","мешок 5 кг",5],["10","мешок 10 кг",10],["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"10, 25 кг","o":"10.91.10.186","sh":6,"nu":["12,98 МДж/кг","22","3,5–5","2,5–4,5","1,30–1,44","0,9–1,0","0,7–0,8","0,16–0,20","≤14"],"cm":"Зернобобовые, продукты переработки масличных культур, мука животного происхождения, масло растительное, минеральное сырьё, синтетические аминокислоты, пробиотик, эмульгатор жиров, комплекс органических кислот, витаминно-минеральный комплекс. Введены: комплексный фермент, антиоксидант, адсорбент микотоксинов.","nt":"","g2":"ГОСТ 18221-2018","g":{"mix":["Комбикорм для птицы","Бройлеры"]}},{"id":3,"s":"Комбикорм для птицы","c":"Бройлеры","n":"Комбикорм для цыплят бройлеров от 29 дней и старше (ФИНИШ)","code":"ПК-6-101-7 гр. 3,2","f":"гранула 3,2 мм","a":"от 29 дней","p":[[5,220],[10,425],[25,985]],"u":[["5","мешок 5 кг",5],["10","мешок 10 кг",10],["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"10, 25 кг","o":"10.91.10.186","sh":6,"nu":["13,19 МДж/кг","20","3,5–10","≤4,7","1,05–1,25","0,8–1,0","0,65–0,75","0,16–0,20","≤14"],"cm":"Зернобобовые, продукты переработки масличных культур, мука животного происхождения, масло растительное, минеральное сырьё, синтетические аминокислоты, комплекс органических кислот, эмульгатор жиров, витаминно-минеральный комплекс. Введены: комплексный фермент, антиоксидант, адсорбент микотоксинов.","nt":"","g2":"ГОСТ 18221-2018","g":{"mix":["Комбикорм для птицы","Бройлеры"]}},{"id":4,"s":"Комбикорм для птицы","c":"Куры яичных пород","n":"Комбикорм полнорационный для молодняка кур от 1 до 7 недель","code":"ПК-2-101-9 гр. 2,0","f":"гранула 2,0 мм","a":"1–7 недель","p":[[5,215],[10,415],[25,960]],"u":[["5","мешок 5 кг",5],["10","мешок 10 кг",10],["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"10, 25 кг","o":"10.91.10.186","sh":6,"nu":["12,14 МДж/кг","19,5–20","3,5–5,0","2,5–4,5","1,00–1,15","1,0–1,2","0,75–0,85","0,16–0,20","≤14"],"cm":"Зернобобовые, продукты переработки масличных культур, минеральное сырьё, синтетические аминокислоты, растительное масло, комплекс органических кислот, эмульгатор жиров, пробиотик, витаминно-минеральный комплекс. Введены: комплексный фермент, антиоксидант, адсорбент микотоксинов.","nt":"","g2":"ГОСТ 18221-2018","g":{"mix":["Комбикорм для птицы","Куры яичных пород"]}},{"id":5,"s":"Комбикорм для птицы","c":"Куры яичных пород","n":"Комбикорм полнорационный для молодняка кур свыше 7 до 13 недель и свыше 17 до 20 недель (предкладка)","code":"ПК-3-101-9 гр. 3,2","f":"гранула 3,2 мм","a":"8–13 и 18–20 недель","p":[[5,180],[10,345],[25,780]],"u":[["5","мешок 5 кг",5],["10","мешок 10 кг",10],["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"10, 25 кг","o":"10.91.10.186","sh":6,"nu":["11,3 МДж/кг","15,5–16","3,5–5,0","2,5–7,0","0,70–0,75","1,2–1,3","0,60–0,70","0,16–0,20","≤14"],"cm":"Зернобобовые, продукты переработки масличных и зерновых культур, мука животного происхождения, минеральное сырьё, синтетические аминокислоты, комплекс органических кислот, витаминно-минеральный комплекс. Введены: комплексный фермент, антиоксидант, адсорбент микотоксинов.","nt":"","g2":"ГОСТ 18221-2018","g":{"mix":["Комбикорм для птицы","Куры яичных пород"]}},{"id":6,"s":"Комбикорм для птицы","c":"Куры яичных пород","n":"Комбикорм полнорационный для молодняка кур свыше 13 до 17 недель","code":"ПК-4-101-87/25 гр. 3,2","f":"гранула 3,2 мм","a":"14–17 недель","p":[[5,160],[10,null],[25,685]],"u":[["5","мешок 5 кг",5],["10","мешок 10 кг",10],["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"25 кг","o":"10.91.10.186","sh":6,"nu":["10,88 МДж/кг","13,5–15,0","3,5–5,0","2,5–7,0","0,70–0,75","1,2–1,3","0,60–0,70","0,16–0,20","≤13,5"],"cm":"Зернобобовые, продукты переработки зерновых и масличных культур, мука животного происхождения, минеральное сырьё, синтетические аминокислоты, комплекс органических кислот, витаминно-минеральный комплекс. Введены: комплексный фермент, антиоксидант, адсорбент микотоксинов.","nt":"10 кг временно нет в продаже","g2":"ГОСТ 18221-2018","g":{"mix":["Комбикорм для птицы","Куры яичных пород"]}},{"id":7,"s":"Комбикорм для птицы","c":"Куры яичных пород","n":"Комбикорм полнорационный для кур-несушек свыше 20 до 45 недель","code":"ПК-1-1-101-34/25 гр. 3,2","f":"гранула 3,2 мм","a":"21–45 недель","p":[[5,180],[10,null],[25,780]],"u":[["5","мешок 5 кг",5],["10","мешок 10 кг",10],["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"25 кг","o":"10.91.10.186","sh":6,"nu":["11,30 МДж/кг","16,5–18,0","3,5–5,0","2,5–5,5","0,70–0,86","3,0–3,6","0,60–0,70","0,16–0,20","≤13,5"],"cm":"Зернобобовые, продукты переработки масличных и зерновых культур, мука животного происхождения, масло растительное, синтетические аминокислоты, минеральное сырьё, эмульгатор жиров, комплекс органических кислот, витаминно-минеральный комплекс. Введены: комплексный фермент, антиоксидант, адсорбент микотоксинов.","nt":"10 кг временно нет в продаже","g2":"ГОСТ 18221-2018","g":{"mix":["Комбикорм для птицы","Куры яичных пород"]}},{"id":8,"s":"Комбикорм для птицы","c":"Куры яичных пород","n":"Комбикорм полнорационный для кур-несушек свыше 45 недель","code":"ПК-1-2-101-35 гр. 3,2","f":"гранула 3,2 мм","a":"от 45 недель","p":[[5,170],[10,325],[25,735]],"u":[["5","мешок 5 кг",5],["10","мешок 10 кг",10],["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"10, 25 кг","o":"10.91.10.186","sh":6,"nu":["10,88 МДж/кг","15,5–17,0","3,5–5,0","2,5–6,0","0,70–0,75","3,0–3,6","0,60–0,70","0,16–0,20","≤13,5"],"cm":"Зернобобовые, продукты переработки масличных и зерновых культур, мука животного происхождения, масло растительное, синтетические аминокислоты, минеральное сырьё, эмульгатор жиров, комплекс органических кислот, витаминно-минеральный комплекс. Введены: комплексный фермент, антиоксидант, адсорбент микотоксинов.","nt":"","g2":"ГОСТ 18221-2018","g":{"mix":["Комбикорм для птицы","Куры яичных пород"]}},{"id":9,"s":"Комбикорм для птицы","c":"Перепела","n":"Комбикорм для молодняка перепелов от 1 до 30 суток","code":"ДК-50-101-224 кр. 2,0","f":"крупка 2,0 мм","a":"1–30 суток","p":[[5,285],[10,555],[25,1310]],"u":[["5","мешок 5 кг",5],["10","мешок 10 кг",10],["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"10, 25 кг","o":"10.91.10.187","sh":6,"nu":["12,6 МДж/кг","≥27,5","","≤3,0","≥1,39","≥2,70","≥0,80","≤0,30","≤14"],"cm":"Продукты переработки масличных культур, зернобобовые, минеральное сырьё, растительные масла, синтетические аминокислоты, органические кислоты, пробиотик, эмульгатор жиров, витаминно-минеральный комплекс. Введены: фитаза, комплексный фермент, антиоксидант, адсорбент микотоксинов.","nt":"","g2":"ГОСТ 28460-2014","g":{"mix":["Комбикорм для птицы","Перепела"]}},{"id":10,"s":"Комбикорм для птицы","c":"Перепела","n":"Комбикорм для молодняка перепелов от 31 до 42 суток","code":"ДК-51-101-45 кр. 2,0","f":"крупка 2,0 мм","a":"31–42 суток","p":[[5,205],[10,395],[25,910]],"u":[["5","мешок 5 кг",5],["10","мешок 10 кг",10],["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"10, 25 кг","o":"10.91.10.187","sh":6,"nu":["11,5 МДж/кг","≥17,0","","≤5,0","≥0,86","≥2,50","≥0,80","≤0,30","≤14"],"cm":"Зернобобовые, продукты переработки масличных культур, минеральное сырьё, мука животного происхождения, синтетические аминокислоты, масло растительное, пробиотик, комплекс органических кислот, витаминно-минеральный комплекс. Введены: фитаза, комплексный фермент, антиоксидант, адсорбент микотоксинов.","nt":"","g2":"ГОСТ 28460-2014","g":{"mix":["Комбикорм для птицы","Перепела"]}},{"id":11,"s":"Комбикорм для птицы","c":"Перепела","n":"Комбикорм для взрослых перепелов","code":"ДК-52-101-17 кр. 2,0","f":"крупка 2,0 мм","a":"от 7 недель","p":[[5,220],[10,425],[25,985]],"u":[["5","мешок 5 кг",5],["10","мешок 10 кг",10],["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"10, 25 кг","o":"10.91.10.187","sh":6,"nu":["290 ккал/100 г","≥21,0","","≤5,0","≥1,05","≥2,80","≥0,70","≤0,30","≤14"],"cm":"Зернобобовые, продукты переработки масличных культур, минеральное сырьё, мука животного происхождения, масло растительное, синтетические аминокислоты, пробиотик, эмульгатор жиров, комплекс органических кислот, витаминно-минеральный комплекс. Введены: комплексный фермент, антиоксидант, адсорбент микотоксинов.","nt":"","g2":"ГОСТ 28460-2014","g":{"mix":["Комбикорм для птицы","Перепела"]}},{"id":12,"s":"Комбикорм для птицы","c":"Перепела","n":"Комбикорм для перепелов на откорме","code":"ДК-53-101-10 гр. 2,0","f":"гранула 2,0 мм","a":"откорм","p":[[25,985]],"u":[["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"25 кг","o":"10.91.10.187","sh":6,"nu":["290 ккал/100 г","21,3","5,74","4,45","1,18","1,09","0,50","0,18",""],"cm":"Кукуруза, пшеница, жмых соевый, шрот соевый, шрот подсолнечный, мука мясокостная, масло растительное, известняковая мука, монокальцийфосфат, лизин, DL-метионин, премикс П6, соль поваренная, гепатопротектор, сульфат натрия, холин хлорид, L-треонин, добавки и фермент.","nt":"","g2":"ГОСТ 28460-2014","g":{"mix":["Комбикорм для птицы","Перепела"]}},{"id":13,"s":"Комбикорм для птицы","c":"Утки и гуси","n":"Комбикорм полнорационный для молодняка уток от 1 до 3 недель","code":"ПК-21-101-8 кр. 2,0","f":"крупка 2,0 мм","a":"1–21 день","p":[[5,220],[10,425],[25,985]],"u":[["5","мешок 5 кг",5],["10","мешок 10 кг",10],["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"10, 25 кг","o":"10.91.10.186","sh":6,"nu":["11,51 МДж/кг","20,0–21,5","2,0–5,0","≤5,0","0,90–1,22","1,0–1,2","0,70–0,80","0,15–0,20","≤14"],"cm":"Зернобобовые, продукты переработки масличных культур, пробиотик, синтетические аминокислоты, комплекс органических кислот, минеральное сырьё, витаминно-минеральный комплекс. Введены: фитаза, комплексный фермент, антиоксидант, адсорбент микотоксинов.","nt":"","g2":"ГОСТ 18221-2018","g":{"mix":["Комбикорм для птицы","Утки и гуси"]}},{"id":14,"s":"Комбикорм для птицы","c":"Утки и гуси","n":"Комбикорм полнорационный для молодняка уток свыше 3 до 8 недель","code":"ПК-22-101-11/25 гр. 3,2","f":"гранула 3,2 мм","a":"от 3 недель","p":[[5,195],[10,null],[25,860]],"u":[["5","мешок 5 кг",5],["10","мешок 10 кг",10],["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"25 кг","o":"10.91.10.186","sh":6,"nu":["12,36 МДж/кг","16,0–17,5","2,0–5,0","≤6,0","0,65–1,0","1,0–1,2","0,65–0,75","0,15–0,20","≤13,5"],"cm":"Зернобобовые, продукты переработки масличных культур, мука животного происхождения, масло растительное, синтетические аминокислоты, минеральное сырьё, эмульгатор жиров, комплекс органических кислот, витаминно-минеральный комплекс. Введены: фитаза, комплексный фермент, антиоксидант, адсорбент микотоксинов.","nt":"10 кг временно нет в продаже","g2":"ГОСТ 18221-2018","g":{"mix":["Комбикорм для птицы","Утки и гуси"]}},{"id":15,"s":"Комбикорм для птицы","c":"Индейки","n":"Комбикорм полнорационный для молодняка индеек от 1 до 8 недель","code":"ПК-11-101-29 кр. 2,0","f":"крупка 2,0 мм","a":"1–8 недель","p":[[5,265],[10,515],[25,1205]],"u":[["5","мешок 5 кг",5],["10","мешок 10 кг",10],["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"10, 25 кг","o":"10.91.10.186","sh":6,"nu":["290 ккал/100 г","25,0","4,0–5,0","≤5,0","1,50–1,60","1,61–1,7","1,0–1,1","0,17–0,2","≤13,5"],"cm":"Зернобобовые, продукты переработки масличных культур, минеральное сырьё, масло растительное, синтетические аминокислоты, пробиотик, комплекс органических кислот, эмульгатор жиров, витаминно-минеральный комплекс. Введены: фитаза, комплексный фермент, антиоксидант, адсорбент микотоксинов.","nt":"","g2":"ГОСТ 18221-2018","g":{"mix":["Комбикорм для птицы","Индейки"]}},{"id":16,"s":"Комбикорм для птицы","c":"Индейки","n":"Комбикорм полнорационный для молодняка индеек от 9 до 13 недель","code":"ПК-11-2-101-30/25 гр. 3,2","f":"гранула 3,2 мм","a":"9–13 недель","p":[[5,240],[10,null],[25,1085]],"u":[["5","мешок 5 кг",5],["10","мешок 10 кг",10],["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"25 кг","o":"10.91.10.186","sh":6,"nu":["295 ккал/100 г","22,0","3,0–5,0","≤5,0","1,20","1,7–1,8","0,8–1,0","0,17–0,2","≤14"],"cm":"Зернобобовые, продукты переработки масличных культур, минеральное сырьё, масло растительное, синтетические аминокислоты, пробиотик, комплекс органических кислот, эмульгатор жиров, витаминно-минеральный комплекс. Введены: фитаза, комплексный фермент, антиоксидант, адсорбент микотоксинов.","nt":"10 кг временно нет в продаже","g2":"ГОСТ 18221-2018","g":{"mix":["Комбикорм для птицы","Индейки"]}},{"id":17,"s":"Комбикорм для птицы","c":"Индейки","n":"Комбикорм полнорационный для молодняка индеек от 14 до 17 недель","code":"ПК-12-1-101-13/25 гр. 3,2","f":"гранула 3,2 мм","a":"14–17 недель","p":[[5,210],[10,null],[25,930]],"u":[["5","мешок 5 кг",5],["10","мешок 10 кг",10],["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"25 кг","o":"10.91.10.186","sh":6,"nu":["300 ккал/100 г","20,0","3,0–5,0","≤5,0","1,20","1,7–1,8","0,8–1,0","0,16–0,2","≤14"],"cm":"Зернобобовые, продукты переработки масличных культур, мука животного происхождения, масло растительное, эмульгатор жиров, синтетические аминокислоты, комплекс органических кислот, минеральное сырьё, витаминно-минеральный комплекс. Введены: фитаза, комплексный фермент, антиоксидант, адсорбент микотоксинов.","nt":"10 кг временно нет в продаже","g2":"ГОСТ 18221-2018","g":{"mix":["Комбикорм для птицы","Индейки"]}},{"id":18,"s":"Комбикорм для птицы","c":"Индейки","n":"Комбикорм полнорационный для индеек от 18 до 30 недель","code":"ПК-13-101-15/25 гр. 3,2","f":"гранула 3,2 мм","a":"18–30 недель","p":[[5,190],[10,null],[25,845]],"u":[["5","мешок 5 кг",5],["10","мешок 10 кг",10],["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"25 кг","o":"10.91.10.186","sh":6,"nu":["305 ккал/100 г","16,5","3,0–5,0","≤6,0","0,70","1,7–1,8","0,7–0,8","0,16–0,2","≤14"],"cm":"Зернобобовые, продукты переработки масличных культур, мука животного происхождения, масло растительное, эмульгатор жиров, синтетические аминокислоты, комплекс органических кислот, минеральное сырьё, витаминно-минеральный комплекс. Введены: фитаза, комплексный фермент, антиоксидант, адсорбент микотоксинов.","nt":"10 кг временно нет в продаже","g2":"ГОСТ 18221-2018","g":{"mix":["Комбикорм для птицы","Индейки"]}},{"id":19,"s":"Комбикорм для птицы","c":"С/х птица","n":"Комбикорм для с/х птицы","code":"ПК-1-101-1/25 гр. 3,2","f":"гранула 3,2 мм","a":"","p":[[5,145],[10,null],[25,610]],"u":[["5","мешок 5 кг",5],["10","мешок 10 кг",10],["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"25 кг","o":"10.91.10.186","sh":6,"nu":["270 ккал/100 г","13,0","3,74","≤5,3","0,83","3,78","0,44","0,18","≤13"],"cm":"Пшеница, кукуруза, шрот подсолнечный, отруби пшеничные, мясокостная мука, известняковая мука, масло подсолнечное, лизин, метионин, треонин, соль, монокальцийфосфат, карбонат калия, холин хлорид, эмульгатор жиров, органические кислоты, витаминно-минеральный комплекс. Введены: фитаза, комплексный фермент, антиоксидант, адсорбент микотоксинов.","nt":"10 кг временно нет в продаже","g2":"ГОСТ 18221-2018","g":{"mix":["Комбикорм для птицы","С/х птица"]}},{"id":20,"s":"Комбикорм для животных","c":"КРС","n":"Комбикорм-концентрат для нетелей и молочных коров продуктивностью до 6000 кг (стойловый период)","code":"КК-60-101-21/25 гр. 4,8","f":"гранула 4,8 мм","a":"нетели, коровы до 6000 кг","p":[[25,625]],"u":[["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"25 кг","o":"10.91.10.181","sh":6,"nu":["10,0 МДж/кг","16,0","2,5","≤7,0","0,72–0,8","0,60–0,80","0,80–0,90","","≤14"],"cm":"Зернобобовые, продукты переработки масличных и зерновых культур, жом свекловичный, минеральное сырьё, синтетические аминокислоты, витаминно-минеральный комплекс. Введён адсорбент микотоксинов.","nt":"","g2":"ГОСТ 9268-2015","g":{"mix":["Комбикорм для животных","КРС"]}},{"id":21,"s":"Комбикорм для животных","c":"КРС","n":"Комбикорм-концентрат для молочных коров продуктивностью св. 6000 кг (стойловый период)","code":"КК-61-101-23 (код на карточке не указан)","f":"","a":"коровы св. 6000 кг","p":[[25,810]],"u":[["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"25 кг","o":"10.91.10.181","sh":6,"nu":["11,0 МДж/кг","20,0","5,0","≤6,0","0,75","0,60–0,85","0,85–1,00","","≤14"],"cm":"Зернобобовые, продукты переработки масличных культур, мука кровяная свиная, меласса, минеральное сырьё, синтетические аминокислоты, витаминно-минеральный комплекс. Введены: ароматизатор, адсорбент микотоксинов.","nt":"","g2":"ГОСТ 9268-2015","g":{"mix":["Комбикорм для животных","КРС"]}},{"id":22,"s":"Комбикорм для животных","c":"КРС","n":"Комбикорм-концентрат для телят до 4 месяцев","code":"КК-62-101-23/25 гр. 3,2","f":"гранула 3,2 мм","a":"до 4 мес.","p":[[25,935]],"u":[["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"25 кг","o":"10.91.10.181","sh":6,"nu":["12,0 МДж/кг","20,0","3,50–3,53","≤6,0","0,90","0,70–0,90","0,75–0,85","","≤14"],"cm":"Зернобобовые, продукты переработки масличных культур, минеральное сырьё, синтетические аминокислоты, пробиотик, комплекс органических кислот, витаминно-минеральный комплекс. Введён адсорбент микотоксинов.","nt":"","g2":"ГОСТ 9268-2015","g":{"mix":["Комбикорм для животных","КРС"]}},{"id":23,"s":"Комбикорм для животных","c":"КРС","n":"Комбикорм-концентрат для молодняка свыше 4 до 12 месяцев (стойловый период)","code":"КК-63-101-27/25 гр. 4,8","f":"гранула 4,8 мм","a":"4–12 мес.","p":[[25,725]],"u":[["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"25 кг","o":"10.91.10.181","sh":6,"nu":["10,5 МДж/кг","17,0","2,5","≤8,0","","0,60–0,80","0,80–1,00","","≤14"],"cm":"Зернобобовые, продукты переработки масличных и зерновых культур, жом свекловичный, синтетические аминокислоты, минеральное сырьё, ароматизатор, комплекс органических кислот, витаминно-минеральный комплекс. Введён адсорбент микотоксинов.","nt":"","g2":"ГОСТ 9268-2015","g":{"mix":["Комбикорм для животных","КРС"]}},{"id":24,"s":"Комбикорм для животных","c":"Свиньи","n":"Комбикорм полнорационный для поросят от 9 до 42 дней","code":"СПК-3-101-131/25 гр. 2,0","f":"гранула 2,0 мм","a":"9–42 дня","p":[[25,1560]],"u":[["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"25 кг","o":"10.91.10.183","sh":6,"nu":["14,30 МДж/кг","19,9–20,0","2,1–6,2","≤3,6","1,10","1,0–1,5","0,9–1,04","0,16–0,40","≤13,5"],"cm":"Зернобобовые, продукты переработки масличных культур, масло растительное, минеральное сырьё, синтетические аминокислоты, комплекс органических кислот, витаминно-минеральный комплекс. Введены: комплексный фермент, антиоксидант, адсорбент микотоксинов, ароматизатор.","nt":"","g2":"ГОСТ 34109-2017","g":{"mix":["Комбикорм для животных","Свиньи"]}},{"id":25,"s":"Комбикорм для животных","c":"Свиньи","n":"Комбикорм полнорационный для поросят от 43 до 60 дней","code":"СПК-4-101-74/25 гр. 3,2","f":"гранула 3,2 мм","a":"43–60 дней","p":[[25,940]],"u":[["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"25 кг","o":"10.91.10.183","sh":6,"nu":["12,10 МДж/кг","17,2–18,5","2,1–6,2","≤5,0","0,84","0,9–1,3","0,9–1,3","0,16–0,36","≤13,5"],"cm":"Зернобобовые, продукты переработки масличных культур, сухое молоко, синтетические аминокислоты, минеральное сырьё, комплекс органических кислот, пробиотик, ароматизатор, витаминно-минеральный комплекс. Введены: фитаза, комплексный фермент, антиоксидант, адсорбент микотоксинов.","nt":"","g2":"ГОСТ 34109-2017","g":{"mix":["Комбикорм для животных","Свиньи"]}},{"id":26,"s":"Комбикорм для животных","c":"Свиньи","n":"Комбикорм полнорационный для поросят от 61 до 120 дней","code":"СПК-5-101-29/25 гр. 3,2","f":"гранула 3,2 мм","a":"61–120 дней","p":[[25,860]],"u":[["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"25 кг","o":"10.91.10.183","sh":6,"nu":["12,10 МДж/кг","15,1–16,1","2,1–6,2","≤5,0","0,73","0,9–1,1","0,8–1,1","0,16–0,36","≤14,5"],"cm":"Зернобобовые, продукты переработки масличных культур, сухое молоко, синтетические аминокислоты, минеральное сырьё, комплекс органических кислот, ароматизатор, витаминно-минеральный комплекс. Введены: фитаза, комплексный фермент, антиоксидант, адсорбент микотоксинов.","nt":"","g2":"ГОСТ 34109-2017","g":{"mix":["Комбикорм для животных","Свиньи"]}},{"id":27,"s":"Комбикорм для животных","c":"Свиньи","n":"Комбикорм полнорационный для откорма свиней первого периода","code":"СПК-7-101-31/25 гр. 4,8","f":"гранула 4,8 мм","a":"откорм, 1-й период","p":[[25,680]],"u":[["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"25 кг","o":"10.91.10.183","sh":6,"nu":["11,60 МДж/кг","14,5–15,5","2,1–6,2","≤6,0","0,66","0,7–1,0","0,7–1,0","0,16–0,32","≤14,5"],"cm":"Зернобобовые, продукты переработки зерновых культур, минеральное сырьё, синтетические аминокислоты, витаминно-минеральный комплекс. Введены: фитаза, комплексный фермент, антиоксидант, адсорбент микотоксинов.","nt":"","g2":"ГОСТ 34109-2017","g":{"mix":["Комбикорм для животных","Свиньи"]}},{"id":28,"s":"Комбикорм для животных","c":"Козы и овцы","n":"Комбикорм-концентрат для ягнят до 4 месяцев","code":"ОК-81-1-101-37/25 гр. 3,2","f":"гранула 3,2 мм","a":"до 4 мес.","p":[[25,735]],"u":[["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"25 кг","o":"10.91.10.184","sh":6,"nu":["10,5 МДж/кг","19,0","2,4–2,6","≤10,0","","0,8","0,8","0,19–0,31","≤14,5"],"cm":"Зернобобовые, продукты переработки масличных и зерновых культур, мука травяная, синтетические аминокислоты, закрепитель гранул, минеральное сырьё, масло растительное, комплекс органических кислот, витаминно-минеральный комплекс. Введён адсорбент микотоксинов.","nt":"","g2":"ГОСТ 10199-2017","g":{"mix":["Комбикорм для животных","Козы и овцы"]}},{"id":29,"s":"Комбикорм для животных","c":"Козы и овцы","n":"Комбикорм-концентрат для молодняка овец старше 4 месяцев","code":"ОК-81-2-101-39/25 гр. 4,8","f":"гранула 4,8 мм","a":"от 4 мес.","p":[[25,700]],"u":[["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"25 кг","o":"10.91.10.184","sh":6,"nu":["10,5 МДж/кг","17,0","1,8–2,5","≤12,0","","0,52","0,7","0,31–0,39","≤14,5"],"cm":"Зернобобовые, продукты переработки масличных и зерновых культур, мука травяная, синтетические аминокислоты, минеральное сырьё, комплекс органических кислот, витаминно-минеральный комплекс. Введён адсорбент микотоксинов.","nt":"","g2":"ГОСТ 10199-2017","g":{"mix":["Комбикорм для животных","Козы и овцы"]}},{"id":30,"s":"Комбикорм для животных","c":"Козы и овцы","n":"Комбикорм-концентрат для суягных и подсосных овцематок","code":"ОК-80-101-41/25 гр. 4,8","f":"гранула 4,8 мм","a":"овцематки","p":[[25,695]],"u":[["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"25 кг","o":"10.91.10.184","sh":6,"nu":["10,5 МДж/кг","15–16","2,5–3,0","≤12,0","","0,5","0,8","0,39–0,47","≤14,5"],"cm":"Зернобобовые, продукты переработки масличных и зерновых культур, мука травяная, синтетические аминокислоты, минеральное сырьё, закрепитель гранул, комплекс органических кислот, витаминно-минеральный комплекс. Введён адсорбент микотоксинов.","nt":"","g2":"ГОСТ 10199-2017","g":{"mix":["Комбикорм для животных","Козы и овцы"]}},{"id":31,"s":"Комбикорм для животных","c":"Кролики","n":"Комбикорм полнорационный для откормочного молодняка кроликов от 30 до 135 дней","code":"ПЗК-94-101-208/25 гр. 4,8","f":"гранула 4,8 мм","a":"30–135 дней","p":[[5,185],[10,null],[25,810]],"u":[["5","мешок 5 кг",5],["10","мешок 10 кг",10],["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"25 кг","o":"10.91.10.185","sh":6,"nu":["0,9 МДж/100 г","18,5","","15–16,5","0,7","1,0","0,6","","≤14"],"cm":"Мука травяная, зернобобовые, продукты переработки зерновых культур, жом свекловичный, минеральное сырьё, пробиотик, закрепитель гранул, синтетические аминокислоты, комплекс органических кислот, витаминно-минеральный комплекс. Введены: фитаза, ферментный комплекс, антиоксидант, адсорбент микотоксинов.","nt":"10 кг временно нет в продаже","g2":"ГОСТ 32897-2014","g":{"mix":["Комбикорм для животных","Кролики"]}},{"id":32,"s":"Комбикорм для животных","c":"Кролики","n":"Комбикорм полнорационный для кроликов в периоды неслучной, случной, сукрольности и лактации","code":"ПЗК-92-101-33/25 гр. 4,8","f":"гранула 4,8 мм","a":"взрослые","p":[[5,175],[10,null],[25,760]],"u":[["5","мешок 5 кг",5],["10","мешок 10 кг",10],["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"25 кг","o":"10.91.10.185","sh":6,"nu":["0,9 МДж/100 г","17,7","","15–16,5","0,66","0,8","0,5","","≤14,5"],"cm":"Мука травяная, зернобобовые, продукты переработки зерновых культур, жом свекловичный, минеральное сырьё, закрепитель гранул, пробиотик, синтетические аминокислоты, комплекс органических кислот, витаминно-минеральный комплекс. Введены: фитаза, ферментный комплекс, антиоксидант, адсорбент микотоксинов.","nt":"10 кг временно нет в продаже","g2":"ГОСТ 32897-2014","g":{"mix":["Комбикорм для животных","Кролики"]}},{"id":33,"s":"Комбикорм для животных","c":"Лабораторные животные","n":"Комбикорм ЛБК-120-7205/15 гр.10,0 для разведения лабораторных животных (мыши, крысы), экструдированный","code":"ЛбК-120-72-05 гр. 10","f":"гранула 10 мм","a":"разведение","p":[[15,1195]],"u":[["15","мешок 15 кг",15],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"15 кг","o":"","sh":4,"nu":["14,0 МДж/кг","25,54","5,44","2,69","1,70","1,06","0,80","0,20",""],"cm":"Пшеница, шрот соевый, жмых соевый, кукуруза, мука мясокостная, ЗЦМ, масло растительное, фосфаты, минералы, синтетические аминокислоты, витаминно-минеральный премикс, сорбент, антиоксидант.","nt":"","g2":"","g":{"mix":["Комбикорм для животных","Лабораторные животные"]}},{"id":34,"s":"Комбикорм для животных","c":"Лабораторные животные","n":"Комбикорм ЛБК-120-7483/15 гр.10,0 для содержания лабораторных животных (мыши, крысы), экструдированный","code":"ЛбК-120-74-83 гр. 10","f":"гранула 10 мм","a":"содержание","p":[[15,1175]],"u":[["15","мешок 15 кг",15],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"15 кг","o":"","sh":4,"nu":["13,08 МДж/кг","21,06","4,68","3,14","1,49","1,02","0,66","0,20",""],"cm":"Пшеница, кукуруза, шрот соевый, жмых соевый, отруби пшеничные, мука мясокостная, масло растительное, фосфаты, минералы, синтетические аминокислоты, витаминно-минеральный премикс, сорбент, антиоксидант.","nt":"","g2":"","g":{"mix":["Комбикорм для животных","Лабораторные животные"]}},{"id":35,"s":"Комбикорм для животных","c":"Лабораторные животные","n":"Комбикорм ЛБК-120-2170/25 гр.4,8 для лабораторных животных (морские свинки, кролики)","code":"ЛбК-120-21-70 гр. 4,8","f":"гранула 4,8 мм","a":"","p":[[25,1630]],"u":[["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"25 кг","o":"","sh":4,"nu":["12,1 МДж/кг","18,28","3,18","7,19","1,20","0,88","0,68","0,21",""],"cm":"Пшеница, шрот соевый, жмых соевый, кукуруза, мука мясокостная, ЗОМ, масло растительное, монокальцийфосфат, известняковая мука, синтетические аминокислоты, витаминно-минеральный премикс, сульфат натрия, сорбент, антиоксидант.","nt":"","g2":"","g":{"mix":["Комбикорм для животных","Лабораторные животные"]}},{"id":36,"s":"Комбикорм для животных","c":"Собаки","n":"Полнорационный корм для взрослых собак","code":"СбПК-130-1-101-1 гр. 10","f":"гранула 10 мм","a":"взрослые","p":[[5,435],[15,1275]],"u":[["5","мешок 5 кг",5],["15","мешок 15 кг",15],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"5, 15 кг","o":"","sh":4,"nu":["","","","","","1,25","0,80","0,24","12,0"],"cm":"Пшеница, кукуруза, ячмень, мука мясная (птица), мука рыбная, масло растительное, жом свекольный, мука кровяная, гидролизованные куриные белки, витаминно-минеральный премикс, фосфаты, синтетические аминокислоты, органические кислоты, соль, антиоксидант.","nt":"","g2":"ГОСТ Р 55453-2022","g":{"mix":["Комбикорм для животных","Собаки"]}},{"id":37,"s":"По индивидуальным рецептам","c":"Лошади","n":"Комбикорм для рабочих лошадей","code":"ЛК-70","f":"","a":"рабочие","p":[],"u":[["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"","o":"","sh":null,"nu":[],"cm":"","nt":"Изготовление по индивидуальному заказу","g2":"","g":{"mix":["По индивидуальным рецептам","Лошади"]}},{"id":38,"s":"По индивидуальным рецептам","c":"Лошади","n":"Комбикорм для тренируемых и спортивных лошадей","code":"ЛК-71","f":"","a":"спортивные","p":[],"u":[["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"","o":"","sh":null,"nu":[],"cm":"","nt":"Изготовление по индивидуальному заказу","g2":"","g":{"mix":["По индивидуальным рецептам","Лошади"]}},{"id":39,"s":"По индивидуальным рецептам","c":"Страусы","n":"Комбикорм полнорационный для взрослых страусов","code":"ДК-62-4161 гр. 4,8","f":"гранула 4,8 мм","a":"взрослые","p":[[25,735]],"u":[["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"25 кг","o":"","sh":6,"nu":["258 ккал/100 г","","","","","3,40","0,77","0,21",""],"cm":"Зерновые, шрот и жмых подсолнечные и соевые, мука мясокостная, минеральное сырьё, синтетические аминокислоты, масла растительные, витаминный премикс, сорбент, антиоксидант, ферментный комплекс.","nt":"","g2":"","g":{"mix":["По индивидуальным рецептам","Страусы"]}},{"id":40,"s":"По индивидуальным рецептам","c":"Олени","n":"Комбикорм-концентрат для оленей","code":"ОСК-160-101-41 гр. 4,8","f":"гранула 4,8 мм","a":"","p":[[25,695]],"u":[["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"25 кг","o":"","sh":4,"nu":["10,6 МДж/кг","","","","","0,68","0,80","0,39",""],"cm":"Зерновые, шроты и жмыхи подсолнечные и соевые, мука травяная, масла растительные, витаминный премикс, минеральное сырьё, сорбент, органические кислоты.","nt":"","g2":"","g":{"mix":["По индивидуальным рецептам","Олени"]}},{"id":41,"s":"По индивидуальным рецептам","c":"Рыбы","n":"Комбикорм для рыб","code":"","f":"","a":"","p":[],"u":[["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"","o":"","sh":6,"nu":[],"cm":"","nt":"Рецепт под заказ: карповые, осетровые, сомовые. Уточните у менеджера.","g2":"","g":{"mix":["По индивидуальным рецептам","Рыбы"]}},{"id":42,"s":"БВМК","c":"КРС","n":"БВМК для откорма КРС с 6 месяцев и до убоя","code":"БВМК 25% / 10%","f":"","a":"с 6 мес. до убоя","p":[[25,1735]],"u":[["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"25 кг","o":"","sh":4,"nu":["11,0 МДж/кг","35,0","5,13","6,83","2,67","2,54","1,11","1,13",""],"cm":"Жмых соевый, шрот соевый, шрот подсолнечный, известняковая мука, монокальцийфосфат, соль, меласса, масло подсолнечное, витаминно-минеральный премикс, адсорбент микотоксинов, синтетические аминокислоты, сульфат натрия, органические кислоты, ароматизатор, антиоксидант.","nt":"","g2":"","g":{"mix":["БВМК","КРС"]}},{"id":43,"s":"БВМК","c":"КРС","n":"БВМК для дойных коров","code":"БВМК 25%","f":"","a":"дойные коровы","p":[[25,1760]],"u":[["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"25 кг","o":"","sh":4,"nu":["9,8 МДж/кг","33,0","5,64","9,69","1,52","2,73","1,85","0,94",""],"cm":"Жмых соевый, шрот подсолнечный, шрот рапсовый, травяная мука люцерны, монокальцийфосфат, витаминно-минеральный премикс, известняковая мука, сера, соль, оксид магния, масло подсолнечное, защищённый азот, эфирные масла, антиоксидант.","nt":"","g2":"","g":{"mix":["БВМК","КРС"]}},{"id":44,"s":"БВМК","c":"Свиньи","n":"БВМК для мясного откорма свиней","code":"БВМК 20%","f":"","a":"откорм","p":[[25,2250]],"u":[["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"25 кг","o":"","sh":4,"nu":["11,4 МДж/кг","35,0","5,27","6,0","4,22","4,12","1,71","0,86",""],"cm":"Шрот соевый, жмых соевый, шрот подсолнечный, жмых подсолнечный, кукурузный глютен, известняковая мука, монокальцийфосфат, витаминно-минеральный премикс, синтетические аминокислоты, соль, масло подсолнечное, адсорбент микотоксинов, ароматизатор, органические кислоты, антиоксидант.","nt":"","g2":"","g":{"mix":["БВМК","Свиньи"]}},{"id":45,"s":"БВМК","c":"Свиньи","n":"БВМК для свиноматок холостых и супоросных","code":"БВМК 15%","f":"","a":"свиноматки","p":[[25,1400]],"u":[["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"25 кг","o":"","sh":4,"nu":["7,56 МДж/кг","23,2","3,01","≤11,01","2,44","3,78","1,09","0,97","≤13"],"cm":"Шрот подсолнечный, жмых соевый, отруби пшеничные, известняковая мука, синтетические аминокислоты, соль, витаминно-минеральный комплекс для свиноматок и хряков, монокальцийфосфат, сорбент, антиоксидант.","nt":"","g2":"","g":{"mix":["БВМК","Свиньи"]}},{"id":46,"s":"БВМК","c":"Свиньи","n":"БВМК для подсосных свиноматок","code":"БВМК 25%","f":"","a":"подсосные свиноматки","p":[[25,1725]],"u":[["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"25 кг","o":"","sh":4,"nu":["10,10 МДж/кг","31,54","2,96","≤11,64","2,72","4,24","1,28","0,69","≤13"],"cm":"Шрот подсолнечный, шрот соевый, известняковая мука, кукурузный глютен, жом сушёный, синтетические аминокислоты, витаминно-минеральный премикс, соль, масло растительное, органические кислоты, сульфат натрия, монокальцийфосфат, сорбент, антиоксидант.","nt":"","g2":"","g":{"mix":["БВМК","Свиньи"]}},{"id":47,"s":"Сопутствующие товары","c":"Мука","n":"Мука пшеничная в/с ГОСТ 2 кг","code":"","f":"","a":"","p":[[2,90]],"u":[["2","мешок 2 кг",2]],"net":"2 кг","o":"","sh":null,"nu":[],"cm":"","nt":"Производитель ООО «Наш союз» (Орловская обл.)","g2":"","g":{"raw":["Сопутствующие товары","Мука"]}},{"id":48,"s":"Сопутствующие товары","c":"Мука","n":"Мука пшеничная в/с ГОСТ 50 кг","code":"","f":"","a":"","p":[[50,1700]],"u":[["50","мешок 50 кг",50]],"net":"50 кг","o":"","sh":null,"nu":[],"cm":"","nt":"Производитель ООО «Наш союз» (Орловская обл.)","g2":"","g":{"raw":["Сопутствующие товары","Мука"]}},{"id":49,"s":"Сопутствующие товары","c":"Масло","n":"Подсолнечное масло","code":"","f":"","a":"","p":[],"u":[["l1","бутылка 1 л",0],["l5","бутыль 5 л",0]],"net":"1 л, 5 л, на разлив","o":"","sh":null,"nu":[],"cm":"","nt":"Масло «Три Семечки»","g2":"","g":{"raw":["Сопутствующие товары","Масло"]}},{"id":50,"s":"Зерно, жмыхи и добавки","c":"Зерно","n":"Пшеница","code":"","f":"","a":"","p":[],"u":[["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"на развес / опт","g2":"","o":"","sh":null,"nu":[],"cm":"","nt":"","k":"зерно","g":{"raw":["Зерно","Зерно"]}},{"id":51,"s":"Зерно, жмыхи и добавки","c":"Зерно","n":"Ячмень","code":"","f":"","a":"","p":[],"u":[["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"на развес / опт","g2":"","o":"","sh":null,"nu":[],"cm":"","nt":"","k":"зерно","g":{"raw":["Зерно","Зерно"]}},{"id":52,"s":"Зерно, жмыхи и добавки","c":"Зерно","n":"Овёс","code":"","f":"","a":"","p":[],"u":[["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"на развес / опт","g2":"","o":"","sh":null,"nu":[],"cm":"","nt":"","k":"зерно овес","g":{"raw":["Зерно","Зерно"]}},{"id":53,"s":"Зерно, жмыхи и добавки","c":"Зерно","n":"Универсальный комбикорм-дроблёнка","code":"","f":"","a":"","p":[],"u":[["45","мешок 45 кг",45],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"мешок 45 кг","g2":"","o":"","sh":null,"nu":[],"cm":"","nt":"","k":"дробленка зерно","g":{"raw":["Зерно","Зерно"],"mix":["Универсальный комбикорм","Дроблёнка"]}},{"id":54,"s":"Зерно, жмыхи и добавки","c":"Жмыхи и рыбная мука","n":"Рыбная мука","code":"","f":"","a":"","p":[],"u":[["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"на развес / опт","g2":"","o":"","sh":null,"nu":[],"cm":"","nt":"","k":"белок","g":{"raw":["Жмыхи и рыбная мука","Жмыхи и рыбная мука"]}},{"id":55,"s":"Зерно, жмыхи и добавки","c":"Жмыхи и рыбная мука","n":"Жмых подсолнечника","code":"","f":"","a":"","p":[],"u":[["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"на развес / опт","g2":"","o":"","sh":null,"nu":[],"cm":"","nt":"","k":"жмых подсолнечный","g":{"raw":["Жмыхи и рыбная мука","Жмыхи и рыбная мука"]}},{"id":56,"s":"Зерно, жмыхи и добавки","c":"Жмыхи и рыбная мука","n":"Жмых льна","code":"","f":"","a":"","p":[],"u":[["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"на развес / опт","g2":"","o":"","sh":null,"nu":[],"cm":"","nt":"","k":"жмых льняной лен","g":{"raw":["Жмыхи и рыбная мука","Жмыхи и рыбная мука"]}},{"id":57,"s":"Зерно, жмыхи и добавки","c":"Жом и соль-лизунец","n":"Жом свёклы","code":"","f":"","a":"","p":[],"u":[["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"на развес / опт","g2":"","o":"","sh":null,"nu":[],"cm":"","nt":"","k":"жом свекольный свеклы","g":{"raw":["Жом и соль-лизунец","Жом и соль-лизунец"]}},{"id":58,"s":"Зерно, жмыхи и добавки","c":"Жом и соль-лизунец","n":"Соль-лизунец в брикетах","code":"","f":"","a":"","p":[],"u":[["pc","брикет, шт.",0]],"net":"брикеты","g2":"","o":"","sh":null,"nu":[],"cm":"","nt":"","k":"соль лизунец","g":{"raw":["Жом и соль-лизунец","Жом и соль-лизунец"]}}],"N":{"Бройлеры":[["ПК-0-101-3 (СТАРТ, 1–7 дн.)","190 г за период",""],["ПК-5-101-5 (РОСТ, 8–28 дн.)","2,1 кг за период",""],["ПК-6-101-7 (ФИНИШ, от 29 дн.)","2,65 кг за период","Продуктивность: 3,1 кг за 45 дней"]],"Куры яичных пород":[["ПК-2-101-9 (1–7 нед.)","1,9 кг за период",""],["ПК-3-101-9 (8–13 и 18–20 нед.)","2,9 кг за период",""],["ПК-4-101-87 (14–17 нед.)","3,15 кг за период",""],["ПК-1-1-101-34 (21–45 нед.)","150 г в сутки",""],["ПК-1-2-101-35 (от 45 нед.)","150 г в сутки",""]],"Перепела":[["ДК-50-101-224 (1–30 сут.)","550 г за период",""],["ДК-51-101-45 (31–42 сут.)","450 г за период",""],["ДК-52-101-17 (взрослые)","30–40 г в сутки","Яйценоскость 300–310 шт./год"]],"Утки и гуси":[["ПК-21-101-8 (1–3 нед.)","1,6 кг за период",""],["ПК-22-101-11 (3–8 нед.)","6 кг за период",""]],"Индейки":[["ПК-11-101-29 (1–8 нед.)","180–220 г в сутки; 7,4 кг за период",""],["ПК-11-2-101-30 (9–13 нед.)","200–300 г в сутки; 12,5 кг за период",""],["ПК-12-1-101-13 (14–17 нед.)","200–300 г в сутки; 12,5 кг за период",""],["ПК-13-101-15 (18–30 нед.)","200–300 г в сутки; 3,8 кг в неделю",""]],"Свиньи":[["СПК-3-101-131 (9–42 дн.)","12 кг за период",""],["СПК-4-101-74 (43–60 дн.)","34 кг за период",""],["СПК-5-101-29 (61–120 дн.)","130 кг за период",""],["СПК-7-101-31 (откорм 1-го периода)","180 кг за период",""]],"Кролики":[["ПЗК-94-101-208 (откорм 30–135 дн.)","150–300 г в сутки",""],["ПЗК-92-101-33 (взрослые)","300–500 г в сутки",""]],"КРС":[["все рецепты","по рекомендации специалиста","Нормы зависят от породы и условий; рекомендации даёт специалист завода"]],"Козы и овцы":[["все рецепты","по рекомендации специалиста","Нормы зависят от породы и условий; рекомендации даёт специалист завода"]],"Собаки":[["СбПК-130-1-101-1","10–15 кг: 290–350 г/день; 20–25 кг: 410–460; 30–35 кг: 510–560; 40–45 кг: 620–670; 50–55 кг: 720–770",""]]},"NB":{"42":[["БВМК 25% / 10%","Вар.1: пшеница 225 + ячмень 225 + кукуруза 300 + БВМК 25% 250 кг; вар.2: пшеница 375 + ячмень 375 + БВМК 250 кг; вар.3: пшеница 125 + ячмень 125 + кукуруза 300 + шрот подс. 350 + БВМК 10% 100 кг",""]],"43":[["БВМК 25%","Зерносмесь 75% + БВМК 25%",""]],"44":[["откорм / свиноматки","40–70 кг: зерносмесь 80% + БВМК 20%; 70–110 кг: зерносмесь 85% + БВМК 15%",""]],"45":[["откорм / свиноматки","40–70 кг: зерносмесь 80% + БВМК 20%; 70–110 кг: зерносмесь 85% + БВМК 15%",""]],"46":[["откорм / свиноматки","40–70 кг: зерносмесь 80% + БВМК 20%; 70–110 кг: зерносмесь 85% + БВМК 15%",""]]}};
 /* ===== Настройки дилера: поменяйте здесь ===== */
 const CFG={
   phoneText:'8-987-047-79-95', phoneIntl:'79870477995',
   max:'https://max.ru/79870477995',
-  address:'Северо-восток Республики Башкортостан. Точный адрес склада сообщит менеджер',
-  hours:'Пн–Сб, 8:00–18:00',
-  route:'https://yandex.ru/maps/?text='+encodeURIComponent('Республика Башкортостан'),
-  showPrices:false /* true — показывать розничные цены завода как ориентир */
+  address:'Республика Башкортостан, с. Месягутово, ул. Промышленная, 11Г, во дворе магазина «Стройдеталь»',
+  hours:[['Понедельник–пятница','09:30–17:00, без обеда'],['Суббота','09:30–14:00'],['Воскресенье','выходной']],
+  hoursShort:'Пн–Пт 09:30–17:00 без обеда, Сб 09:30–14:00, Вс выходной',
+  route:'https://yandex.ru/maps/?text='+encodeURIComponent('Месягутово, Промышленная улица, 11Г'),
+  showPrices:false /* true: показывать розничные цены завода как ориентир */
 };
-const D={"P":[{"id":1,"s":"Комбикорм для птицы","c":"Бройлеры","n":"Комбикорм для цыплят бройлеров и кур-несушек от 1 до 7 дней (СТАРТ)","code":"ПК-0-101-3 кр. 2,0","f":"крупка 2,0 мм","a":"1–7 дней","p":[[5,250],[10,485],[25,1135]],"u":[["5","мешок 5 кг",5],["10","мешок 10 кг",10],["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"10, 25 кг","g":"ГОСТ 18221-2018","o":"10.91.10.186","sh":6,"nu":["12,3 МДж/кг","23,0–23,5","3,5–5,0","≤4,5","1,30–1,44","0,9–1,0","0,7–0,8","0,16–0,2","≤14"],"cm":"Зернобобовые, продукты переработки масличных культур, минеральное сырьё, синтетические аминокислоты, масло растительное, пробиотик, эмульгатор жиров, комплекс органических кислот, витаминно-минеральный комплекс. Введены: фитаза, комплексный фермент, антиоксидант, адсорбент микотоксинов.","nt":""},{"id":2,"s":"Комбикорм для птицы","c":"Бройлеры","n":"Комбикорм для цыплят бройлеров от 8 до 28 дней (РОСТ)","code":"ПК-5-101-5 гр. 2,0","f":"гранула 2,0 мм","a":"8–28 дней","p":[[5,230],[10,445],[25,1035]],"u":[["5","мешок 5 кг",5],["10","мешок 10 кг",10],["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"10, 25 кг","g":"ГОСТ 18221-2018","o":"10.91.10.186","sh":6,"nu":["12,98 МДж/кг","22","3,5–5","2,5–4,5","1,30–1,44","0,9–1,0","0,7–0,8","0,16–0,20","≤14"],"cm":"Зернобобовые, продукты переработки масличных культур, мука животного происхождения, масло растительное, минеральное сырьё, синтетические аминокислоты, пробиотик, эмульгатор жиров, комплекс органических кислот, витаминно-минеральный комплекс. Введены: комплексный фермент, антиоксидант, адсорбент микотоксинов.","nt":""},{"id":3,"s":"Комбикорм для птицы","c":"Бройлеры","n":"Комбикорм для цыплят бройлеров от 29 дней и старше (ФИНИШ)","code":"ПК-6-101-7 гр. 3,2","f":"гранула 3,2 мм","a":"от 29 дней","p":[[5,220],[10,425],[25,985]],"u":[["5","мешок 5 кг",5],["10","мешок 10 кг",10],["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"10, 25 кг","g":"ГОСТ 18221-2018","o":"10.91.10.186","sh":6,"nu":["13,19 МДж/кг","20","3,5–10","≤4,7","1,05–1,25","0,8–1,0","0,65–0,75","0,16–0,20","≤14"],"cm":"Зернобобовые, продукты переработки масличных культур, мука животного происхождения, масло растительное, минеральное сырьё, синтетические аминокислоты, комплекс органических кислот, эмульгатор жиров, витаминно-минеральный комплекс. Введены: комплексный фермент, антиоксидант, адсорбент микотоксинов.","nt":""},{"id":4,"s":"Комбикорм для птицы","c":"Куры яичных пород","n":"Комбикорм полнорационный для молодняка кур от 1 до 7 недель","code":"ПК-2-101-9 гр. 2,0","f":"гранула 2,0 мм","a":"1–7 недель","p":[[5,215],[10,415],[25,960]],"u":[["5","мешок 5 кг",5],["10","мешок 10 кг",10],["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"10, 25 кг","g":"ГОСТ 18221-2018","o":"10.91.10.186","sh":6,"nu":["12,14 МДж/кг","19,5–20","3,5–5,0","2,5–4,5","1,00–1,15","1,0–1,2","0,75–0,85","0,16–0,20","≤14"],"cm":"Зернобобовые, продукты переработки масличных культур, минеральное сырьё, синтетические аминокислоты, растительное масло, комплекс органических кислот, эмульгатор жиров, пробиотик, витаминно-минеральный комплекс. Введены: комплексный фермент, антиоксидант, адсорбент микотоксинов.","nt":""},{"id":5,"s":"Комбикорм для птицы","c":"Куры яичных пород","n":"Комбикорм полнорационный для молодняка кур свыше 7 до 13 недель и свыше 17 до 20 недель (предкладка)","code":"ПК-3-101-9 гр. 3,2","f":"гранула 3,2 мм","a":"8–13 и 18–20 недель","p":[[5,180],[10,345],[25,780]],"u":[["5","мешок 5 кг",5],["10","мешок 10 кг",10],["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"10, 25 кг","g":"ГОСТ 18221-2018","o":"10.91.10.186","sh":6,"nu":["11,3 МДж/кг","15,5–16","3,5–5,0","2,5–7,0","0,70–0,75","1,2–1,3","0,60–0,70","0,16–0,20","≤14"],"cm":"Зернобобовые, продукты переработки масличных и зерновых культур, мука животного происхождения, минеральное сырьё, синтетические аминокислоты, комплекс органических кислот, витаминно-минеральный комплекс. Введены: комплексный фермент, антиоксидант, адсорбент микотоксинов.","nt":""},{"id":6,"s":"Комбикорм для птицы","c":"Куры яичных пород","n":"Комбикорм полнорационный для молодняка кур свыше 13 до 17 недель","code":"ПК-4-101-87/25 гр. 3,2","f":"гранула 3,2 мм","a":"14–17 недель","p":[[5,160],[10,null],[25,685]],"u":[["5","мешок 5 кг",5],["10","мешок 10 кг",10],["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"25 кг","g":"ГОСТ 18221-2018","o":"10.91.10.186","sh":6,"nu":["10,88 МДж/кг","13,5–15,0","3,5–5,0","2,5–7,0","0,70–0,75","1,2–1,3","0,60–0,70","0,16–0,20","≤13,5"],"cm":"Зернобобовые, продукты переработки зерновых и масличных культур, мука животного происхождения, минеральное сырьё, синтетические аминокислоты, комплекс органических кислот, витаминно-минеральный комплекс. Введены: комплексный фермент, антиоксидант, адсорбент микотоксинов.","nt":"10 кг временно нет в продаже"},{"id":7,"s":"Комбикорм для птицы","c":"Куры яичных пород","n":"Комбикорм полнорационный для кур-несушек свыше 20 до 45 недель","code":"ПК-1-1-101-34/25 гр. 3,2","f":"гранула 3,2 мм","a":"21–45 недель","p":[[5,180],[10,null],[25,780]],"u":[["5","мешок 5 кг",5],["10","мешок 10 кг",10],["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"25 кг","g":"ГОСТ 18221-2018","o":"10.91.10.186","sh":6,"nu":["11,30 МДж/кг","16,5–18,0","3,5–5,0","2,5–5,5","0,70–0,86","3,0–3,6","0,60–0,70","0,16–0,20","≤13,5"],"cm":"Зернобобовые, продукты переработки масличных и зерновых культур, мука животного происхождения, масло растительное, синтетические аминокислоты, минеральное сырьё, эмульгатор жиров, комплекс органических кислот, витаминно-минеральный комплекс. Введены: комплексный фермент, антиоксидант, адсорбент микотоксинов.","nt":"10 кг временно нет в продаже"},{"id":8,"s":"Комбикорм для птицы","c":"Куры яичных пород","n":"Комбикорм полнорационный для кур-несушек свыше 45 недель","code":"ПК-1-2-101-35 гр. 3,2","f":"гранула 3,2 мм","a":"от 45 недель","p":[[5,170],[10,325],[25,735]],"u":[["5","мешок 5 кг",5],["10","мешок 10 кг",10],["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"10, 25 кг","g":"ГОСТ 18221-2018","o":"10.91.10.186","sh":6,"nu":["10,88 МДж/кг","15,5–17,0","3,5–5,0","2,5–6,0","0,70–0,75","3,0–3,6","0,60–0,70","0,16–0,20","≤13,5"],"cm":"Зернобобовые, продукты переработки масличных и зерновых культур, мука животного происхождения, масло растительное, синтетические аминокислоты, минеральное сырьё, эмульгатор жиров, комплекс органических кислот, витаминно-минеральный комплекс. Введены: комплексный фермент, антиоксидант, адсорбент микотоксинов.","nt":""},{"id":9,"s":"Комбикорм для птицы","c":"Перепела","n":"Комбикорм для молодняка перепелов от 1 до 30 суток","code":"ДК-50-101-224 кр. 2,0","f":"крупка 2,0 мм","a":"1–30 суток","p":[[5,285],[10,555],[25,1310]],"u":[["5","мешок 5 кг",5],["10","мешок 10 кг",10],["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"10, 25 кг","g":"ГОСТ 28460-2014","o":"10.91.10.187","sh":6,"nu":["12,6 МДж/кг","≥27,5","","≤3,0","≥1,39","≥2,70","≥0,80","≤0,30","≤14"],"cm":"Продукты переработки масличных культур, зернобобовые, минеральное сырьё, растительные масла, синтетические аминокислоты, органические кислоты, пробиотик, эмульгатор жиров, витаминно-минеральный комплекс. Введены: фитаза, комплексный фермент, антиоксидант, адсорбент микотоксинов.","nt":""},{"id":10,"s":"Комбикорм для птицы","c":"Перепела","n":"Комбикорм для молодняка перепелов от 31 до 42 суток","code":"ДК-51-101-45 кр. 2,0","f":"крупка 2,0 мм","a":"31–42 суток","p":[[5,205],[10,395],[25,910]],"u":[["5","мешок 5 кг",5],["10","мешок 10 кг",10],["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"10, 25 кг","g":"ГОСТ 28460-2014","o":"10.91.10.187","sh":6,"nu":["11,5 МДж/кг","≥17,0","","≤5,0","≥0,86","≥2,50","≥0,80","≤0,30","≤14"],"cm":"Зернобобовые, продукты переработки масличных культур, минеральное сырьё, мука животного происхождения, синтетические аминокислоты, масло растительное, пробиотик, комплекс органических кислот, витаминно-минеральный комплекс. Введены: фитаза, комплексный фермент, антиоксидант, адсорбент микотоксинов.","nt":""},{"id":11,"s":"Комбикорм для птицы","c":"Перепела","n":"Комбикорм для взрослых перепелов","code":"ДК-52-101-17 кр. 2,0","f":"крупка 2,0 мм","a":"от 7 недель","p":[[5,220],[10,425],[25,985]],"u":[["5","мешок 5 кг",5],["10","мешок 10 кг",10],["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"10, 25 кг","g":"ГОСТ 28460-2014","o":"10.91.10.187","sh":6,"nu":["290 ккал/100 г","≥21,0","","≤5,0","≥1,05","≥2,80","≥0,70","≤0,30","≤14"],"cm":"Зернобобовые, продукты переработки масличных культур, минеральное сырьё, мука животного происхождения, масло растительное, синтетические аминокислоты, пробиотик, эмульгатор жиров, комплекс органических кислот, витаминно-минеральный комплекс. Введены: комплексный фермент, антиоксидант, адсорбент микотоксинов.","nt":""},{"id":12,"s":"Комбикорм для птицы","c":"Перепела","n":"Комбикорм для перепелов на откорме","code":"ДК-53-101-10 гр. 2,0","f":"гранула 2,0 мм","a":"откорм","p":[[25,985]],"u":[["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"25 кг","g":"ГОСТ 28460-2014","o":"10.91.10.187","sh":6,"nu":["290 ккал/100 г","21,3","5,74","4,45","1,18","1,09","0,50","0,18",""],"cm":"Кукуруза, пшеница, жмых соевый, шрот соевый, шрот подсолнечный, мука мясокостная, масло растительное, известняковая мука, монокальцийфосфат, лизин, DL-метионин, премикс П6, соль поваренная, гепатопротектор, сульфат натрия, холин хлорид, L-треонин, добавки и фермент.","nt":""},{"id":13,"s":"Комбикорм для птицы","c":"Утки и гуси","n":"Комбикорм полнорационный для молодняка уток от 1 до 3 недель","code":"ПК-21-101-8 кр. 2,0","f":"крупка 2,0 мм","a":"1–21 день","p":[[5,220],[10,425],[25,985]],"u":[["5","мешок 5 кг",5],["10","мешок 10 кг",10],["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"10, 25 кг","g":"ГОСТ 18221-2018","o":"10.91.10.186","sh":6,"nu":["11,51 МДж/кг","20,0–21,5","2,0–5,0","≤5,0","0,90–1,22","1,0–1,2","0,70–0,80","0,15–0,20","≤14"],"cm":"Зернобобовые, продукты переработки масличных культур, пробиотик, синтетические аминокислоты, комплекс органических кислот, минеральное сырьё, витаминно-минеральный комплекс. Введены: фитаза, комплексный фермент, антиоксидант, адсорбент микотоксинов.","nt":""},{"id":14,"s":"Комбикорм для птицы","c":"Утки и гуси","n":"Комбикорм полнорационный для молодняка уток свыше 3 до 8 недель","code":"ПК-22-101-11/25 гр. 3,2","f":"гранула 3,2 мм","a":"от 3 недель","p":[[5,195],[10,null],[25,860]],"u":[["5","мешок 5 кг",5],["10","мешок 10 кг",10],["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"25 кг","g":"ГОСТ 18221-2018","o":"10.91.10.186","sh":6,"nu":["12,36 МДж/кг","16,0–17,5","2,0–5,0","≤6,0","0,65–1,0","1,0–1,2","0,65–0,75","0,15–0,20","≤13,5"],"cm":"Зернобобовые, продукты переработки масличных культур, мука животного происхождения, масло растительное, синтетические аминокислоты, минеральное сырьё, эмульгатор жиров, комплекс органических кислот, витаминно-минеральный комплекс. Введены: фитаза, комплексный фермент, антиоксидант, адсорбент микотоксинов.","nt":"10 кг временно нет в продаже"},{"id":15,"s":"Комбикорм для птицы","c":"Индейки","n":"Комбикорм полнорационный для молодняка индеек от 1 до 8 недель","code":"ПК-11-101-29 кр. 2,0","f":"крупка 2,0 мм","a":"1–8 недель","p":[[5,265],[10,515],[25,1205]],"u":[["5","мешок 5 кг",5],["10","мешок 10 кг",10],["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"10, 25 кг","g":"ГОСТ 18221-2018","o":"10.91.10.186","sh":6,"nu":["290 ккал/100 г","25,0","4,0–5,0","≤5,0","1,50–1,60","1,61–1,7","1,0–1,1","0,17–0,2","≤13,5"],"cm":"Зернобобовые, продукты переработки масличных культур, минеральное сырьё, масло растительное, синтетические аминокислоты, пробиотик, комплекс органических кислот, эмульгатор жиров, витаминно-минеральный комплекс. Введены: фитаза, комплексный фермент, антиоксидант, адсорбент микотоксинов.","nt":""},{"id":16,"s":"Комбикорм для птицы","c":"Индейки","n":"Комбикорм полнорационный для молодняка индеек от 9 до 13 недель","code":"ПК-11-2-101-30/25 гр. 3,2","f":"гранула 3,2 мм","a":"9–13 недель","p":[[5,240],[10,null],[25,1085]],"u":[["5","мешок 5 кг",5],["10","мешок 10 кг",10],["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"25 кг","g":"ГОСТ 18221-2018","o":"10.91.10.186","sh":6,"nu":["295 ккал/100 г","22,0","3,0–5,0","≤5,0","1,20","1,7–1,8","0,8–1,0","0,17–0,2","≤14"],"cm":"Зернобобовые, продукты переработки масличных культур, минеральное сырьё, масло растительное, синтетические аминокислоты, пробиотик, комплекс органических кислот, эмульгатор жиров, витаминно-минеральный комплекс. Введены: фитаза, комплексный фермент, антиоксидант, адсорбент микотоксинов.","nt":"10 кг временно нет в продаже"},{"id":17,"s":"Комбикорм для птицы","c":"Индейки","n":"Комбикорм полнорационный для молодняка индеек от 14 до 17 недель","code":"ПК-12-1-101-13/25 гр. 3,2","f":"гранула 3,2 мм","a":"14–17 недель","p":[[5,210],[10,null],[25,930]],"u":[["5","мешок 5 кг",5],["10","мешок 10 кг",10],["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"25 кг","g":"ГОСТ 18221-2018","o":"10.91.10.186","sh":6,"nu":["300 ккал/100 г","20,0","3,0–5,0","≤5,0","1,20","1,7–1,8","0,8–1,0","0,16–0,2","≤14"],"cm":"Зернобобовые, продукты переработки масличных культур, мука животного происхождения, масло растительное, эмульгатор жиров, синтетические аминокислоты, комплекс органических кислот, минеральное сырьё, витаминно-минеральный комплекс. Введены: фитаза, комплексный фермент, антиоксидант, адсорбент микотоксинов.","nt":"10 кг временно нет в продаже"},{"id":18,"s":"Комбикорм для птицы","c":"Индейки","n":"Комбикорм полнорационный для индеек от 18 до 30 недель","code":"ПК-13-101-15/25 гр. 3,2","f":"гранула 3,2 мм","a":"18–30 недель","p":[[5,190],[10,null],[25,845]],"u":[["5","мешок 5 кг",5],["10","мешок 10 кг",10],["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"25 кг","g":"ГОСТ 18221-2018","o":"10.91.10.186","sh":6,"nu":["305 ккал/100 г","16,5","3,0–5,0","≤6,0","0,70","1,7–1,8","0,7–0,8","0,16–0,2","≤14"],"cm":"Зернобобовые, продукты переработки масличных культур, мука животного происхождения, масло растительное, эмульгатор жиров, синтетические аминокислоты, комплекс органических кислот, минеральное сырьё, витаминно-минеральный комплекс. Введены: фитаза, комплексный фермент, антиоксидант, адсорбент микотоксинов.","nt":"10 кг временно нет в продаже"},{"id":19,"s":"Комбикорм для птицы","c":"С/х птица","n":"Комбикорм для с/х птицы","code":"ПК-1-101-1/25 гр. 3,2","f":"гранула 3,2 мм","a":"","p":[[5,145],[10,null],[25,610]],"u":[["5","мешок 5 кг",5],["10","мешок 10 кг",10],["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"25 кг","g":"ГОСТ 18221-2018","o":"10.91.10.186","sh":6,"nu":["270 ккал/100 г","13,0","3,74","≤5,3","0,83","3,78","0,44","0,18","≤13"],"cm":"Пшеница, кукуруза, шрот подсолнечный, отруби пшеничные, мясокостная мука, известняковая мука, масло подсолнечное, лизин, метионин, треонин, соль, монокальцийфосфат, карбонат калия, холин хлорид, эмульгатор жиров, органические кислоты, витаминно-минеральный комплекс. Введены: фитаза, комплексный фермент, антиоксидант, адсорбент микотоксинов.","nt":"10 кг временно нет в продаже"},{"id":20,"s":"Комбикорм для животных","c":"КРС","n":"Комбикорм-концентрат для нетелей и молочных коров продуктивностью до 6000 кг (стойловый период)","code":"КК-60-101-21/25 гр. 4,8","f":"гранула 4,8 мм","a":"нетели, коровы до 6000 кг","p":[[25,625]],"u":[["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"25 кг","g":"ГОСТ 9268-2015","o":"10.91.10.181","sh":6,"nu":["10,0 МДж/кг","16,0","2,5","≤7,0","0,72–0,8","0,60–0,80","0,80–0,90","","≤14"],"cm":"Зернобобовые, продукты переработки масличных и зерновых культур, жом свекловичный, минеральное сырьё, синтетические аминокислоты, витаминно-минеральный комплекс. Введён адсорбент микотоксинов.","nt":""},{"id":21,"s":"Комбикорм для животных","c":"КРС","n":"Комбикорм-концентрат для молочных коров продуктивностью св. 6000 кг (стойловый период)","code":"КК-61-101-23 (код на карточке не указан)","f":"","a":"коровы св. 6000 кг","p":[[25,810]],"u":[["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"25 кг","g":"ГОСТ 9268-2015","o":"10.91.10.181","sh":6,"nu":["11,0 МДж/кг","20,0","5,0","≤6,0","0,75","0,60–0,85","0,85–1,00","","≤14"],"cm":"Зернобобовые, продукты переработки масличных культур, мука кровяная свиная, меласса, минеральное сырьё, синтетические аминокислоты, витаминно-минеральный комплекс. Введены: ароматизатор, адсорбент микотоксинов.","nt":""},{"id":22,"s":"Комбикорм для животных","c":"КРС","n":"Комбикорм-концентрат для телят до 4 месяцев","code":"КК-62-101-23/25 гр. 3,2","f":"гранула 3,2 мм","a":"до 4 мес.","p":[[25,935]],"u":[["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"25 кг","g":"ГОСТ 9268-2015","o":"10.91.10.181","sh":6,"nu":["12,0 МДж/кг","20,0","3,50–3,53","≤6,0","0,90","0,70–0,90","0,75–0,85","","≤14"],"cm":"Зернобобовые, продукты переработки масличных культур, минеральное сырьё, синтетические аминокислоты, пробиотик, комплекс органических кислот, витаминно-минеральный комплекс. Введён адсорбент микотоксинов.","nt":""},{"id":23,"s":"Комбикорм для животных","c":"КРС","n":"Комбикорм-концентрат для молодняка свыше 4 до 12 месяцев (стойловый период)","code":"КК-63-101-27/25 гр. 4,8","f":"гранула 4,8 мм","a":"4–12 мес.","p":[[25,725]],"u":[["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"25 кг","g":"ГОСТ 9268-2015","o":"10.91.10.181","sh":6,"nu":["10,5 МДж/кг","17,0","2,5","≤8,0","","0,60–0,80","0,80–1,00","","≤14"],"cm":"Зернобобовые, продукты переработки масличных и зерновых культур, жом свекловичный, синтетические аминокислоты, минеральное сырьё, ароматизатор, комплекс органических кислот, витаминно-минеральный комплекс. Введён адсорбент микотоксинов.","nt":""},{"id":24,"s":"Комбикорм для животных","c":"Свиньи","n":"Комбикорм полнорационный для поросят от 9 до 42 дней","code":"СПК-3-101-131/25 гр. 2,0","f":"гранула 2,0 мм","a":"9–42 дня","p":[[25,1560]],"u":[["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"25 кг","g":"ГОСТ 34109-2017","o":"10.91.10.183","sh":6,"nu":["14,30 МДж/кг","19,9–20,0","2,1–6,2","≤3,6","1,10","1,0–1,5","0,9–1,04","0,16–0,40","≤13,5"],"cm":"Зернобобовые, продукты переработки масличных культур, масло растительное, минеральное сырьё, синтетические аминокислоты, комплекс органических кислот, витаминно-минеральный комплекс. Введены: комплексный фермент, антиоксидант, адсорбент микотоксинов, ароматизатор.","nt":""},{"id":25,"s":"Комбикорм для животных","c":"Свиньи","n":"Комбикорм полнорационный для поросят от 43 до 60 дней","code":"СПК-4-101-74/25 гр. 3,2","f":"гранула 3,2 мм","a":"43–60 дней","p":[[25,940]],"u":[["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"25 кг","g":"ГОСТ 34109-2017","o":"10.91.10.183","sh":6,"nu":["12,10 МДж/кг","17,2–18,5","2,1–6,2","≤5,0","0,84","0,9–1,3","0,9–1,3","0,16–0,36","≤13,5"],"cm":"Зернобобовые, продукты переработки масличных культур, сухое молоко, синтетические аминокислоты, минеральное сырьё, комплекс органических кислот, пробиотик, ароматизатор, витаминно-минеральный комплекс. Введены: фитаза, комплексный фермент, антиоксидант, адсорбент микотоксинов.","nt":""},{"id":26,"s":"Комбикорм для животных","c":"Свиньи","n":"Комбикорм полнорационный для поросят от 61 до 120 дней","code":"СПК-5-101-29/25 гр. 3,2","f":"гранула 3,2 мм","a":"61–120 дней","p":[[25,860]],"u":[["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"25 кг","g":"ГОСТ 34109-2017","o":"10.91.10.183","sh":6,"nu":["12,10 МДж/кг","15,1–16,1","2,1–6,2","≤5,0","0,73","0,9–1,1","0,8–1,1","0,16–0,36","≤14,5"],"cm":"Зернобобовые, продукты переработки масличных культур, сухое молоко, синтетические аминокислоты, минеральное сырьё, комплекс органических кислот, ароматизатор, витаминно-минеральный комплекс. Введены: фитаза, комплексный фермент, антиоксидант, адсорбент микотоксинов.","nt":""},{"id":27,"s":"Комбикорм для животных","c":"Свиньи","n":"Комбикорм полнорационный для откорма свиней первого периода","code":"СПК-7-101-31/25 гр. 4,8","f":"гранула 4,8 мм","a":"откорм, 1-й период","p":[[25,680]],"u":[["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"25 кг","g":"ГОСТ 34109-2017","o":"10.91.10.183","sh":6,"nu":["11,60 МДж/кг","14,5–15,5","2,1–6,2","≤6,0","0,66","0,7–1,0","0,7–1,0","0,16–0,32","≤14,5"],"cm":"Зернобобовые, продукты переработки зерновых культур, минеральное сырьё, синтетические аминокислоты, витаминно-минеральный комплекс. Введены: фитаза, комплексный фермент, антиоксидант, адсорбент микотоксинов.","nt":""},{"id":28,"s":"Комбикорм для животных","c":"Козы и овцы","n":"Комбикорм-концентрат для ягнят до 4 месяцев","code":"ОК-81-1-101-37/25 гр. 3,2","f":"гранула 3,2 мм","a":"до 4 мес.","p":[[25,735]],"u":[["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"25 кг","g":"ГОСТ 10199-2017","o":"10.91.10.184","sh":6,"nu":["10,5 МДж/кг","19,0","2,4–2,6","≤10,0","","0,8","0,8","0,19–0,31","≤14,5"],"cm":"Зернобобовые, продукты переработки масличных и зерновых культур, мука травяная, синтетические аминокислоты, закрепитель гранул, минеральное сырьё, масло растительное, комплекс органических кислот, витаминно-минеральный комплекс. Введён адсорбент микотоксинов.","nt":""},{"id":29,"s":"Комбикорм для животных","c":"Козы и овцы","n":"Комбикорм-концентрат для молодняка овец старше 4 месяцев","code":"ОК-81-2-101-39/25 гр. 4,8","f":"гранула 4,8 мм","a":"от 4 мес.","p":[[25,700]],"u":[["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"25 кг","g":"ГОСТ 10199-2017","o":"10.91.10.184","sh":6,"nu":["10,5 МДж/кг","17,0","1,8–2,5","≤12,0","","0,52","0,7","0,31–0,39","≤14,5"],"cm":"Зернобобовые, продукты переработки масличных и зерновых культур, мука травяная, синтетические аминокислоты, минеральное сырьё, комплекс органических кислот, витаминно-минеральный комплекс. Введён адсорбент микотоксинов.","nt":""},{"id":30,"s":"Комбикорм для животных","c":"Козы и овцы","n":"Комбикорм-концентрат для суягных и подсосных овцематок","code":"ОК-80-101-41/25 гр. 4,8","f":"гранула 4,8 мм","a":"овцематки","p":[[25,695]],"u":[["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"25 кг","g":"ГОСТ 10199-2017","o":"10.91.10.184","sh":6,"nu":["10,5 МДж/кг","15–16","2,5–3,0","≤12,0","","0,5","0,8","0,39–0,47","≤14,5"],"cm":"Зернобобовые, продукты переработки масличных и зерновых культур, мука травяная, синтетические аминокислоты, минеральное сырьё, закрепитель гранул, комплекс органических кислот, витаминно-минеральный комплекс. Введён адсорбент микотоксинов.","nt":""},{"id":31,"s":"Комбикорм для животных","c":"Кролики","n":"Комбикорм полнорационный для откормочного молодняка кроликов от 30 до 135 дней","code":"ПЗК-94-101-208/25 гр. 4,8","f":"гранула 4,8 мм","a":"30–135 дней","p":[[5,185],[10,null],[25,810]],"u":[["5","мешок 5 кг",5],["10","мешок 10 кг",10],["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"25 кг","g":"ГОСТ 32897-2014","o":"10.91.10.185","sh":6,"nu":["0,9 МДж/100 г","18,5","","15–16,5","0,7","1,0","0,6","","≤14"],"cm":"Мука травяная, зернобобовые, продукты переработки зерновых культур, жом свекловичный, минеральное сырьё, пробиотик, закрепитель гранул, синтетические аминокислоты, комплекс органических кислот, витаминно-минеральный комплекс. Введены: фитаза, ферментный комплекс, антиоксидант, адсорбент микотоксинов.","nt":"10 кг временно нет в продаже"},{"id":32,"s":"Комбикорм для животных","c":"Кролики","n":"Комбикорм полнорационный для кроликов в периоды неслучной, случной, сукрольности и лактации","code":"ПЗК-92-101-33/25 гр. 4,8","f":"гранула 4,8 мм","a":"взрослые","p":[[5,175],[10,null],[25,760]],"u":[["5","мешок 5 кг",5],["10","мешок 10 кг",10],["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"25 кг","g":"ГОСТ 32897-2014","o":"10.91.10.185","sh":6,"nu":["0,9 МДж/100 г","17,7","","15–16,5","0,66","0,8","0,5","","≤14,5"],"cm":"Мука травяная, зернобобовые, продукты переработки зерновых культур, жом свекловичный, минеральное сырьё, закрепитель гранул, пробиотик, синтетические аминокислоты, комплекс органических кислот, витаминно-минеральный комплекс. Введены: фитаза, ферментный комплекс, антиоксидант, адсорбент микотоксинов.","nt":"10 кг временно нет в продаже"},{"id":33,"s":"Комбикорм для животных","c":"Лабораторные животные","n":"Комбикорм ЛБК-120-7205/15 гр.10,0 для разведения лабораторных животных (мыши, крысы), экструдированный","code":"ЛбК-120-72-05 гр. 10","f":"гранула 10 мм","a":"разведение","p":[[15,1195]],"u":[["15","мешок 15 кг",15],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"15 кг","g":"","o":"","sh":4,"nu":["14,0 МДж/кг","25,54","5,44","2,69","1,70","1,06","0,80","0,20",""],"cm":"Пшеница, шрот соевый, жмых соевый, кукуруза, мука мясокостная, ЗЦМ, масло растительное, фосфаты, минералы, синтетические аминокислоты, витаминно-минеральный премикс, сорбент, антиоксидант.","nt":""},{"id":34,"s":"Комбикорм для животных","c":"Лабораторные животные","n":"Комбикорм ЛБК-120-7483/15 гр.10,0 для содержания лабораторных животных (мыши, крысы), экструдированный","code":"ЛбК-120-74-83 гр. 10","f":"гранула 10 мм","a":"содержание","p":[[15,1175]],"u":[["15","мешок 15 кг",15],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"15 кг","g":"","o":"","sh":4,"nu":["13,08 МДж/кг","21,06","4,68","3,14","1,49","1,02","0,66","0,20",""],"cm":"Пшеница, кукуруза, шрот соевый, жмых соевый, отруби пшеничные, мука мясокостная, масло растительное, фосфаты, минералы, синтетические аминокислоты, витаминно-минеральный премикс, сорбент, антиоксидант.","nt":""},{"id":35,"s":"Комбикорм для животных","c":"Лабораторные животные","n":"Комбикорм ЛБК-120-2170/25 гр.4,8 для лабораторных животных (морские свинки, кролики)","code":"ЛбК-120-21-70 гр. 4,8","f":"гранула 4,8 мм","a":"","p":[[25,1630]],"u":[["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"25 кг","g":"","o":"","sh":4,"nu":["12,1 МДж/кг","18,28","3,18","7,19","1,20","0,88","0,68","0,21",""],"cm":"Пшеница, шрот соевый, жмых соевый, кукуруза, мука мясокостная, ЗОМ, масло растительное, монокальцийфосфат, известняковая мука, синтетические аминокислоты, витаминно-минеральный премикс, сульфат натрия, сорбент, антиоксидант.","nt":""},{"id":36,"s":"Комбикорм для животных","c":"Собаки","n":"Полнорационный корм для взрослых собак","code":"СбПК-130-1-101-1 гр. 10","f":"гранула 10 мм","a":"взрослые","p":[[5,435],[15,1275]],"u":[["5","мешок 5 кг",5],["15","мешок 15 кг",15],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"5, 15 кг","g":"ГОСТ Р 55453-2022","o":"","sh":4,"nu":["","","","","","1,25","0,80","0,24","12,0"],"cm":"Пшеница, кукуруза, ячмень, мука мясная (птица), мука рыбная, масло растительное, жом свекольный, мука кровяная, гидролизованные куриные белки, витаминно-минеральный премикс, фосфаты, синтетические аминокислоты, органические кислоты, соль, антиоксидант.","nt":""},{"id":37,"s":"По индивидуальным рецептам","c":"Лошади","n":"Комбикорм для рабочих лошадей","code":"ЛК-70","f":"","a":"рабочие","p":[],"u":[["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"","g":"","o":"","sh":null,"nu":[],"cm":"","nt":"Изготовление по индивидуальному заказу, цена не указана"},{"id":38,"s":"По индивидуальным рецептам","c":"Лошади","n":"Комбикорм для тренируемых и спортивных лошадей","code":"ЛК-71","f":"","a":"спортивные","p":[],"u":[["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"","g":"","o":"","sh":null,"nu":[],"cm":"","nt":"Изготовление по индивидуальному заказу, цена не указана"},{"id":39,"s":"По индивидуальным рецептам","c":"Страусы","n":"Комбикорм полнорационный для взрослых страусов","code":"ДК-62-4161 гр. 4,8","f":"гранула 4,8 мм","a":"взрослые","p":[[25,735]],"u":[["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"25 кг","g":"","o":"","sh":6,"nu":["258 ккал/100 г","","","","","3,40","0,77","0,21",""],"cm":"Зерновые, шрот и жмых подсолнечные и соевые, мука мясокостная, минеральное сырьё, синтетические аминокислоты, масла растительные, витаминный премикс, сорбент, антиоксидант, ферментный комплекс.","nt":""},{"id":40,"s":"По индивидуальным рецептам","c":"Олени","n":"Комбикорм-концентрат для оленей","code":"ОСК-160-101-41 гр. 4,8","f":"гранула 4,8 мм","a":"","p":[[25,695]],"u":[["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"25 кг","g":"","o":"","sh":4,"nu":["10,6 МДж/кг","","","","","0,68","0,80","0,39",""],"cm":"Зерновые, шроты и жмыхи подсолнечные и соевые, мука травяная, масла растительные, витаминный премикс, минеральное сырьё, сорбент, органические кислоты.","nt":""},{"id":41,"s":"По индивидуальным рецептам","c":"Рыбы","n":"Комбикорм для рыб (раздел)","code":"","f":"","a":"","p":[],"u":[["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"","g":"","o":"","sh":6,"nu":[],"cm":"","nt":"Только описательная страница: виды рыб (карповые, осетровые, сомовые), позиций и цен нет"},{"id":42,"s":"БВМК","c":"КРС","n":"БВМК для откорма КРС с 6 месяцев и до убоя","code":"БВМК 25% / 10%","f":"","a":"с 6 мес. до убоя","p":[[25,1735]],"u":[["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"25 кг","g":"","o":"","sh":4,"nu":["11,0 МДж/кг","35,0","5,13","6,83","2,67","2,54","1,11","1,13",""],"cm":"Жмых соевый, шрот соевый, шрот подсолнечный, известняковая мука, монокальцийфосфат, соль, меласса, масло подсолнечное, витаминно-минеральный премикс, адсорбент микотоксинов, синтетические аминокислоты, сульфат натрия, органические кислоты, ароматизатор, антиоксидант.","nt":""},{"id":43,"s":"БВМК","c":"КРС","n":"БВМК для дойных коров","code":"БВМК 25%","f":"","a":"дойные коровы","p":[[25,1760]],"u":[["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"25 кг","g":"","o":"","sh":4,"nu":["9,8 МДж/кг","33,0","5,64","9,69","1,52","2,73","1,85","0,94",""],"cm":"Жмых соевый, шрот подсолнечный, шрот рапсовый, травяная мука люцерны, монокальцийфосфат, витаминно-минеральный премикс, известняковая мука, сера, соль, оксид магния, масло подсолнечное, защищённый азот, эфирные масла, антиоксидант.","nt":""},{"id":44,"s":"БВМК","c":"Свиньи","n":"БВМК для мясного откорма свиней","code":"БВМК 20%","f":"","a":"откорм","p":[[25,2250]],"u":[["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"25 кг","g":"","o":"","sh":4,"nu":["11,4 МДж/кг","35,0","5,27","6,0","4,22","4,12","1,71","0,86",""],"cm":"Шрот соевый, жмых соевый, шрот подсолнечный, жмых подсолнечный, кукурузный глютен, известняковая мука, монокальцийфосфат, витаминно-минеральный премикс, синтетические аминокислоты, соль, масло подсолнечное, адсорбент микотоксинов, ароматизатор, органические кислоты, антиоксидант.","nt":""},{"id":45,"s":"БВМК","c":"Свиньи","n":"БВМК для свиноматок холостых и супоросных","code":"БВМК 15%","f":"","a":"свиноматки","p":[[25,1400]],"u":[["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"25 кг","g":"","o":"","sh":4,"nu":["7,56 МДж/кг","23,2","3,01","≤11,01","2,44","3,78","1,09","0,97","≤13"],"cm":"Шрот подсолнечный, жмых соевый, отруби пшеничные, известняковая мука, синтетические аминокислоты, соль, витаминно-минеральный комплекс для свиноматок и хряков, монокальцийфосфат, сорбент, антиоксидант.","nt":""},{"id":46,"s":"БВМК","c":"Свиньи","n":"БВМК для подсосных свиноматок","code":"БВМК 25%","f":"","a":"подсосные свиноматки","p":[[25,1725]],"u":[["25","мешок 25 кг",25],["kg","на развес, кг",1],["t","тонна (опт)",1000]],"net":"25 кг","g":"","o":"","sh":4,"nu":["10,10 МДж/кг","31,54","2,96","≤11,64","2,72","4,24","1,28","0,69","≤13"],"cm":"Шрот подсолнечный, шрот соевый, известняковая мука, кукурузный глютен, жом сушёный, синтетические аминокислоты, витаминно-минеральный премикс, соль, масло растительное, органические кислоты, сульфат натрия, монокальцийфосфат, сорбент, антиоксидант.","nt":""},{"id":47,"s":"Сопутствующие товары","c":"Мука","n":"Мука пшеничная в/с ГОСТ 2 кг","code":"","f":"","a":"","p":[[2,90]],"u":[["2","мешок 2 кг",2]],"net":"2 кг","g":"","o":"","sh":null,"nu":[],"cm":"","nt":"Производитель ООО «Наш союз» (Орловская обл.). 45 000 ₽/т"},{"id":48,"s":"Сопутствующие товары","c":"Мука","n":"Мука пшеничная в/с ГОСТ 50 кг","code":"","f":"","a":"","p":[[50,1700]],"u":[["50","мешок 50 кг",50]],"net":"50 кг","g":"","o":"","sh":null,"nu":[],"cm":"","nt":"Производитель ООО «Наш союз» (Орловская обл.). 34 000 ₽/т"},{"id":49,"s":"Сопутствующие товары","c":"Масло","n":"Подсолнечное масло","code":"","f":"","a":"","p":[],"u":[["l1","бутылка 1 л",0],["l5","бутыль 5 л",0]],"net":"1 л, 5 л, на разлив","g":"","o":"","sh":null,"nu":[],"cm":"","nt":"Масло «Три Семечки»; цены на странице нет"}],"N":{"Бройлеры":[["ПК-0-101-3 (СТАРТ, 1–7 дн.)","190 г за период",""],["ПК-5-101-5 (РОСТ, 8–28 дн.)","2,1 кг за период",""],["ПК-6-101-7 (ФИНИШ, от 29 дн.)","2,65 кг за период","Продуктивность: 3,1 кг за 45 дней"]],"Куры яичных пород":[["ПК-2-101-9 (1–7 нед.)","1,9 кг за период",""],["ПК-3-101-9 (8–13 и 18–20 нед.)","2,9 кг за период",""],["ПК-4-101-87 (14–17 нед.)","3,15 кг за период",""],["ПК-1-1-101-34 (21–45 нед.)","150 г в сутки",""],["ПК-1-2-101-35 (от 45 нед.)","150 г в сутки",""]],"Перепела":[["ДК-50-101-224 (1–30 сут.)","550 г за период",""],["ДК-51-101-45 (31–42 сут.)","450 г за период",""],["ДК-52-101-17 (взрослые)","30–40 г в сутки","Яйценоскость 300–310 шт./год"]],"Утки и гуси":[["ПК-21-101-8 (1–3 нед.)","1,6 кг за период",""],["ПК-22-101-11 (3–8 нед.)","6 кг за период",""]],"Индейки":[["ПК-11-101-29 (1–8 нед.)","180–220 г в сутки; 7,4 кг за период",""],["ПК-11-2-101-30 (9–13 нед.)","200–300 г в сутки; 12,5 кг за период",""],["ПК-12-1-101-13 (14–17 нед.)","200–300 г в сутки; 12,5 кг за период",""],["ПК-13-101-15 (18–30 нед.)","200–300 г в сутки; 3,8 кг в неделю",""]],"Свиньи":[["СПК-3-101-131 (9–42 дн.)","12 кг за период",""],["СПК-4-101-74 (43–60 дн.)","34 кг за период",""],["СПК-5-101-29 (61–120 дн.)","130 кг за период",""],["СПК-7-101-31 (откорм 1-го периода)","180 кг за период",""]],"Кролики":[["ПЗК-94-101-208 (откорм 30–135 дн.)","150–300 г в сутки",""],["ПЗК-92-101-33 (взрослые)","300–500 г в сутки",""]],"КРС":[["все рецепты","—","Нормы зависят от породы и условий; рекомендации даёт специалист завода"]],"Козы и овцы":[["все рецепты","—","Нормы зависят от породы и условий; рекомендации даёт специалист завода"]],"Собаки":[["СбПК-130-1-101-1","10–15 кг → 290–350 г/день; 20–25 кг → 410–460; 30–35 кг → 510–560; 40–45 кг → 620–670; 50–55 кг → 720–770",""]]},"NB":{"42":[["БВМК 25% / 10%","Вар.1: пшеница 225 + ячмень 225 + кукуруза 300 + БВМК 25% 250 кг; вар.2: пшеница 375 + ячмень 375 + БВМК 250 кг; вар.3: пшеница 125 + ячмень 125 + кукуруза 300 + шрот подс. 350 + БВМК 10% 100 кг",""]],"43":[["БВМК 25%","Зерносмесь 75% + БВМК 25%",""]],"44":[["откорм / свиноматки","40–70 кг: зерносмесь 80% + БВМК 20%; 70–110 кг: зерносмесь 85% + БВМК 15%","На карточках свиноматок повторён текст про откорм — уточнить"]],"45":[["откорм / свиноматки","40–70 кг: зерносмесь 80% + БВМК 20%; 70–110 кг: зерносмесь 85% + БВМК 15%","На карточках свиноматок повторён текст про откорм — уточнить"]],"46":[["откорм / свиноматки","40–70 кг: зерносмесь 80% + БВМК 20%; 70–110 кг: зерносмесь 85% + БВМК 15%","На карточках свиноматок повторён текст про откорм — уточнить"]]}};
 const P=D.P, N=D.N, NB=D.NB;
 const byId=Object.fromEntries(P.map(p=>[p.id,p]));
-const SECT={"Комбикорм для птицы":"Птица","Комбикорм для животных":"Сельхозживотные","По индивидуальным рецептам":"По индивидуальным рецептам","БВМК":"БВМК — концентраты","Сопутствующие товары":"Сопутствующие товары"};
-const CDESC={"Бройлеры":"Старт, рост, финиш — полный цикл до убоя","Куры яичных пород":"Молодняк, предкладка, несушки","Перепела":"Молодняк, взрослые, откорм","Утки и гуси":"Молодняк от 1 дня до 8 недель","Индейки":"От 1 до 30 недель","С/х птица":"Для смешанного птичника","КРС":"Телята, молодняк, молочные коровы","Свиньи":"Поросята и откорм","Козы и овцы":"Ягнята, молодняк, овцематки","Кролики":"Откорм и взрослое поголовье","Лабораторные животные":"Мыши, крысы, морские свинки","Собаки":"Полнорационный корм для взрослых собак","Лошади":"Рабочие и спортивные, под заказ","Страусы":"Для взрослых страусов","Олени":"Комбикорм-концентрат","Рыбы":"Карповые, осетровые, сомовые — под заказ","КРС ":"","Мука":"Пшеничная в/с","Масло":"Подсолнечное «Три Семечки»"};
+const SECT={"Комбикорм для птицы":"Птица","Комбикорм для животных":"Сельхоз&shy;животные","По индивидуальным рецептам":"Рецепты под заказ","БВМК":"БВМК","Универсальный комбикорм":"Универсальный"};
+const SSUB={"Комбикорм для птицы":"Бройлеры, несушки, перепела, утки, индейки","Комбикорм для животных":"КРС, свиньи, овцы, кролики, собаки","По индивидуальным рецептам":"Изготовление по заказу","БВМК":"Белково-витаминно-минеральные концентраты","Универсальный комбикорм":"Для всех видов хозяйства"};
+const CDESC={"Бройлеры":"Старт, рост, финиш: полный цикл до убоя","Куры яичных пород":"Молодняк, предкладка, несушки","Перепела":"Молодняк, взрослые, откорм","Утки и гуси":"Молодняк от 1 дня до 8 недель","Индейки":"От 1 до 30 недель","С/х птица":"Для смешанного птичника","КРС":"Телята, молодняк, молочные коровы","Свиньи":"Поросята и откорм","Козы и овцы":"Ягнята, молодняк, овцематки","Кролики":"Откорм и взрослое поголовье","Лабораторные животные":"Мыши, крысы, морские свинки","Собаки":"Полнорационный корм для взрослых собак","Лошади":"Рабочие и спортивные","Страусы":"Для взрослых страусов","Олени":"Комбикорм-концентрат","Рыбы":"Карповые, осетровые, сомовые","Дроблёнка":"Дроблёное зерно, мешок 45 кг"};
 const NUT=["Обменная энергия","Сырой протеин, %","Сырой жир, %","Сырая клетчатка, %","Лизин, %","Кальций (Ca), %","Фосфор усв. (P), %","Натрий (Na), %","Влажность, %"];
 const WA='https://wa.me/'+CFG.phoneIntl;
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
 const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const waLink=t=>WA+'?text='+encodeURIComponent(t);
 const fmt=n=>Number(n).toLocaleString('ru-RU');
+const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
 
-/* ---- хранилище заявки (localStorage, без регистрации) ---- */
+/* ---- заявка в браузере (localStorage, без регистрации) ---- */
 const KEY='bk-rb-cart-v1'; let cart=[];
 try{cart=JSON.parse(localStorage.getItem(KEY)||'[]').filter(i=>byId[i.id])}catch(e){cart=[]}
 function save(){try{localStorage.setItem(KEY,JSON.stringify(cart))}catch(e){}renderCart();updateBadges()}
@@ -492,55 +592,57 @@ try{const f=JSON.parse(localStorage.getItem(FKEY)||'{}');if(f.n)$('#oName').valu
 function unitOf(p,k){return p.u.find(u=>u[0]===k)||p.u[0]}
 function defUnit(p){const bags=p.u.filter(u=>/^\d+$/.test(u[0]));return (bags.length?bags.reduce((a,b)=>+a[0]>+b[0]?a:b):p.u[0])[0]}
 function add(id,unit,qty){const p=byId[id];unit=unit||defUnit(p);qty=+qty||1;const f=cart.find(i=>i.id===id&&i.unit===unit);if(f)f.qty=+(f.qty+qty).toFixed(1);else cart.push({id,unit,qty});save();
-  const u=unitOf(p,unit);toast('В заявке: '+shortName(p)+' — '+u[1]+' × '+fmtQty(f?f.qty:qty));renderCatalogState()}
+  const u=unitOf(p,unit);toast('Добавлено в заявку: '+shortName(p)+', '+u[1]+', '+fmtQty(f?f.qty:qty)+' шт.');renderCatalogState()}
 function fmtQty(q){return String(q).replace('.',',')}
 function shortName(p){return p.n.length>60?p.n.slice(0,58)+'…':p.n}
 function totalKg(){return cart.reduce((s,i)=>{const p=byId[i.id];const u=unitOf(p,i.unit);return s+(u[2]||0)*i.qty},0)}
 function fmtKg(kg){return kg>=1000?(kg/1000).toLocaleString('ru-RU',{maximumFractionDigits:2})+' т':fmt(Math.round(kg))+' кг'}
-
-/* ---- изображение мешка (условная иллюстрация) ---- */
-function bag(p){const lbl=(p.code||p.c).split(' ')[0].slice(0,9);
-  return `<svg class="bag" viewBox="0 0 52 64" aria-hidden="true"><path d="M8 6h36l3 6-2 46H7L5 12Z" fill="var(--bag)" stroke="var(--bag-line)" stroke-width="1.2"/><path d="M8 6c4 3 8 3 12 0 4 3 8 3 12 0 4 3 8 3 12 0" fill="none" stroke="var(--bag-line)" stroke-width="1.2"/><rect x="9" y="22" width="34" height="18" rx="2" fill="var(--green)"/><text x="26" y="34.5" text-anchor="middle" font-size="7.2" font-weight="700" fill="var(--on-green)" font-family="Golos Text,Arial,sans-serif">${esc(lbl)}</text><path d="M14 48h24" stroke="var(--bag-line)" stroke-width="1.2"/></svg>`}
-
-function packsText(p){const b=p.p.map(x=>x[0]);if(p.c==='Масло')return '1 л · 5 л';return b.length?b.join(' · ')+' кг':'под заказ'}
-function priceHtml(p){if(!CFG.showPrices||!p.p.length)return `<span class="price">Цена по запросу — зависит от объёма</span>`;
-  const big=p.p.filter(x=>x[1]).sort((a,b)=>b[0]-a[0])[0];return big?`<span class="price num"><b>${fmt(big[1])} ₽</b> / мешок ${big[0]} кг</span>`:`<span class="price">Цена по запросу</span>`}
+function packsText(p){const b=p.p.map(x=>x[0]);if(p.c==='Масло')return '1 л / 5 л';if(p.net&&!b.length)return p.net;return b.length?b.join(' / ')+' кг':'под заказ'}
+function priceHtml(p){if(!CFG.showPrices||!p.p.length)return `<span class="hint">Цена по запросу, зависит от объёма</span>`;
+  const big=p.p.filter(x=>x[1]).sort((a,b)=>b[0]-a[0])[0];return big?`<span class="num"><b>${fmt(big[1])} ₽</b> за мешок ${big[0]} кг</span>`:`<span class="hint">Цена по запросу</span>`}
 function askPrice(p){return waLink(`Здравствуйте! Подскажите цену и наличие: ${p.n}${p.code?' ('+p.code+')':''}. Нужно: `)}
+function plural(n){const a=n%10,b=n%100;return a===1&&b!==11?'позиция':a>=2&&a<=4&&(b<10||b>=20)?'позиции':'позиций'}
+function searchStr(p){return esc((p.n+' '+p.code+' '+p.c+' '+p.a+' '+p.s+' '+(p.k||'')).toLowerCase())}
 
-/* ---- каталог ---- */
-const groups=[];{const seen={};P.forEach(p=>{const k=p.s+'|'+p.c;if(!seen[k]){seen[k]={s:p.s,c:p.c,items:[]};groups.push(seen[k])}seen[k].items.push(p)})}
-function catId(g){return 'cat-'+groups.indexOf(g)}
+/* ---- каталог: два блока по составу; товар может стоять в обоих ---- */
+function blockGroups(b){const out=[],seen={};P.forEach(p=>{const g=p.g&&p.g[b];if(!g)return;const k=g[0]+'|'+g[1];if(!seen[k]){seen[k]={s:g[0],c:g[1],items:[]};out.push(seen[k])}seen[k].items.push(p)});return out}
+const GA=blockGroups('mix'), GB=blockGroups('raw').sort((a,b)=>(a.s==='Сопутствующие товары')-(b.s==='Сопутствующие товары'));
 function renderCatalog(){
-  let html='',last='';
-  groups.forEach((g,i)=>{
-    if(g.s!==last){html+=`<div class="sec-title">${esc(SECT[g.s]||g.s)}</div>`;last=g.s}
-    html+=`<details class="cat" id="${catId(g)}" ${i===0?'open':''}><summary><span class="cat-ico">${esc(g.c.slice(0,2))}</span><span><span class="cat-name">${esc(g.c)}</span><br><span class="cat-sub">${esc(CDESC[g.c]||'')} · ${g.items.length} ${plural(g.items.length)}</span></span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></summary><div class="grid">`;
-    g.items.forEach(p=>{html+=`<article class="card" data-id="${p.id}" data-s="${esc((p.n+' '+p.code+' '+p.c+' '+p.a+' '+p.s).toLowerCase())}">
-      <div class="card-top">${bag(p)}<div style="min-width:0;display:grid;gap:6px"><h3>${esc(p.n)}</h3></div></div>
-      <div class="meta">${p.a?`<span class="tag">${esc(p.a)}</span>`:''}${p.f?`<span class="tag">${esc(p.f)}</span>`:''}<span class="tag num">${esc(packsText(p))}</span></div>
-      ${priceHtml(p)}
-      <div class="card-actions"><button class="btn btn-ghost btn-sm" type="button" data-more="${p.id}">Подробнее</button><button class="btn btn-primary btn-sm" type="button" data-add="${p.id}">В заявку</button></div></article>`});
-    html+='</div></details>'});
-  $('#cats').innerHTML=html;
-  $('#chips').innerHTML=groups.map(g=>`<button class="chip" type="button" role="listitem" data-chip="${catId(g)}">${esc(g.c)}</button>`).join('');
+  /* блок 1: разделы слева, группы-аккордеоны со строками справа */
+  const parts=[];GA.forEach(g=>{let pt=parts.find(x=>x.s===g.s);if(!pt){pt={s:g.s,gs:[]};parts.push(pt)}pt.gs.push(g)});
+  let h='';
+  parts.forEach((pt,pi)=>{
+    h+=`<div class="part" id="part-${pi}"><h3 class="part-title">${SECT[pt.s]||esc(pt.s)}<small>${esc(SSUB[pt.s]||'')}</small></h3><div>`;
+    pt.gs.forEach((g,gi)=>{const n=g.items.length;
+      h+=`<details class="grp" ${pi===0&&gi===0?'open':''}><summary><span class="grp-name">${esc(g.c)}</span><span class="grp-sub">${esc(CDESC[g.c]||'')}</span><span class="grp-n">${n} ${plural(n)}<span class="plus" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 1v10M1 6h10"/></svg></span></span></summary><div class="rows">`;
+      g.items.forEach(p=>{
+        h+=`<div class="row" data-id="${p.id}" data-s="${searchStr(p)}"><div class="row-main"><button class="row-name" type="button" data-more="${p.id}">${esc(p.n)}</button>
+          <div class="plates">${p.code?`<span class="plate num">${esc(p.code)}</span>`:''}${p.a?`<span class="plate">${esc(p.a)}</span>`:''}${p.f?`<span class="plate">${esc(p.f)}</span>`:''}<span class="plate num">${esc(packsText(p))}</span></div></div>
+          <div class="row-act"><button class="tlink" type="button" data-more="${p.id}">Подробнее</button><button class="btn btn-line btn-sm" type="button" data-add="${p.id}">В заявку</button></div></div>`});
+      h+='</div></details>'});
+    h+='</div></div>'});
+  $('#mix').innerHTML=h;
+  $('#jump').innerHTML=parts.map((pt,i)=>`<a href="#part-${i}">${SECT[pt.s]||esc(pt.s)}</a>`).join('')+`<a href="#raw">Зерно и добавки</a>`;
+  /* блок 2: колонки-списки */
+  const cols=[];GB.forEach(g=>{let c=cols.find(x=>x.s===g.s);if(!c){c={s:g.s,items:[]};cols.push(c)}c.items.push(...g.items)});
+  $('#rawList').innerHTML=cols.map(c=>`<div class="col rv"><h3>${esc(c.s)}</h3><ul>${c.items.map(p=>`<li data-id="${p.id}" data-s="${searchStr(p)}"><button class="row-name" type="button" data-more="${p.id}">${esc(p.n)}</button><button class="add-mini" type="button" data-add="${p.id}">В заявку</button><div class="plates"><span class="plate num">${esc(packsText(p))}</span>${p.g.mix?`<span class="both">Есть и в блоке 1</span>`:''}</div></li>`).join('')}</ul></div>`).join('');
   $('#factCount').textContent=P.length;
   renderCatalogState()}
-function plural(n){const a=n%10,b=n%100;return a===1&&b!==11?'позиция':a>=2&&a<=4&&(b<10||b>=20)?'позиции':'позиций'}
-function renderCatalogState(){$$('[data-add]').forEach(b=>{const id=+b.dataset.add;const n=cart.filter(i=>i.id===id).length;b.classList.toggle('in-cart',n>0);b.textContent=n?'В заявке ✓':'В заявку'})}
+function renderCatalogState(){$$('[data-add]').forEach(b=>{const id=+b.dataset.add;const n=cart.some(i=>i.id===id);b.classList.toggle('in-cart',n);b.textContent=n?'В заявке':'В заявку'})}
 
 /* ---- карточка товара ---- */
 let cur=null;
 function openProduct(id){const p=byId[id];cur=p;const u0=defUnit(p);
-  const nut=p.nu.map((v,i)=>v?`<tr><th scope="row">${NUT[i]}</th><td class="num">${esc(v)}</td></tr>`:'').join('');
+  const nut=(p.nu||[]).map((v,i)=>v?`<tr><th scope="row">${NUT[i]}</th><td class="num">${esc(v)}</td></tr>`:'').join('');
   const norms=(NB[p.id]||N[p.c]||[]);
-  const tech=[['Код рецепта',p.code],['Форма',p.f],['Фасовка (нетто)',p.net],['ГОСТ',p.g],['ОКПД 2',p.o],['Срок хранения',p.sh?p.sh+' мес. со дня выработки':'']].filter(x=>x[1]);
-  $('#pd').innerHTML=`<div class="dlg-head">${bag(p)}<div style="min-width:0"><span class="eyebrow">${esc(p.c)}</span><h3 id="pdTitle">${esc(p.n)}</h3></div><button class="x" type="button" data-close aria-label="Закрыть"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+  const tech=[['Код рецепта',p.code],['Форма',p.f],['Фасовка',p.net],['ГОСТ',p.g2],['ОКПД 2',p.o],['Срок хранения',p.sh?p.sh+' мес. со дня выработки':'']].filter(x=>x[1]);
+  $('#pd').innerHTML=`<div class="dlg-head"><div style="min-width:0"><span class="eyebrow">${esc(p.c)}</span><h3 id="pdTitle">${esc(p.n)}</h3></div><button class="x" type="button" data-close aria-label="Закрыть"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
   <div class="dlg-body">
     ${p.nt?`<div class="notice">${esc(p.nt)}</div>`:''}
-    <div class="meta">${p.a?`<span class="tag">Для: ${esc(p.a)}</span>`:''}<span class="tag num">Фасовка: ${esc(packsText(p))}</span></div>
+    <div class="plates">${p.a?`<span class="plate">Для: ${esc(p.a)}</span>`:''}<span class="plate num">Фасовка: ${esc(packsText(p))}</span></div>
     ${priceHtml(p)}
     ${tech.length?`<div><div class="sub-h">Характеристики</div><div class="tbl-wrap"><table><tbody>${tech.map(t=>`<tr><th scope="row">${t[0]}</th><td>${esc(t[1])}</td></tr>`).join('')}</tbody></table></div></div>`:''}
-    ${nut?`<div><div class="sub-h">Показатели качества</div><div class="tbl-wrap"><table><tbody>${nut}</tbody></table></div><p class="hint" style="margin-top:6px">«≤» — не более; «a–b» — от и до. Данные производителя, могут меняться в рамках ГОСТ.</p></div>`:''}
+    ${nut?`<div><div class="sub-h">Показатели качества</div><div class="tbl-wrap"><table><tbody>${nut}</tbody></table></div><p class="hint" style="margin-top:6px">«≤» означает «не более», «a–b» означает «от и до». Данные производителя, могут меняться в рамках ГОСТ.</p></div>`:''}
     ${p.cm?`<div><div class="sub-h">Состав</div><p>${esc(p.cm)}</p><p class="hint" style="margin-top:6px">Не содержит ГМО. В составе возможны изменения.</p></div>`:''}
     ${norms.length?`<div><div class="sub-h">Нормы кормления</div><div class="tbl-wrap"><table><thead><tr><th>Рецепт / период</th><th>Расход на голову</th></tr></thead><tbody>${norms.map(r=>`<tr><td>${esc(r[0])}${r[2]?`<br><span class="hint">${esc(r[2])}</span>`:''}</td><td>${esc(r[1])}</td></tr>`).join('')}</tbody></table></div></div>`:''}
   </div>
@@ -550,7 +652,7 @@ function openProduct(id){const p=byId[id];cur=p;const u0=defUnit(p);
       <div class="field"><label for="pdQty">Количество</label><div class="stepper"><button type="button" data-step="-1" aria-label="Меньше">−</button><input id="pdQty" type="number" inputmode="decimal" min="0.5" step="1" value="1"><button type="button" data-step="1" aria-label="Больше">+</button></div></div>
     </div>
     <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px">
-      <a class="btn btn-ghost" href="${askPrice(p)}" target="_blank" rel="noopener">Уточнить цену</a>
+      <a class="btn btn-line" href="${askPrice(p)}" target="_blank" rel="noopener">Уточнить цену</a>
       <button class="btn btn-primary" type="button" id="pdAdd">Добавить в заявку</button>
     </div>
   </div>`;
@@ -559,18 +661,18 @@ function openProduct(id){const p=byId[id];cur=p;const u0=defUnit(p);
 /* ---- заявка ---- */
 function renderCart(){
   const box=$('#cartList');
-  if(!cart.length){box.innerHTML=`<div class="empty"><p><b>Заявка пока пустая.</b></p><p class="muted" style="margin-top:6px">Добавьте корма из каталога или просто напишите менеджеру.</p><a class="btn btn-ghost btn-sm" style="margin-top:12px" href="#catalog" data-close>Перейти в каталог</a></div>`;$('#cartTotal').innerHTML='';}
-  else{box.innerHTML=cart.map((i,ix)=>{const p=byId[i.id];return `<div class="ci"><div class="ci-name">${esc(p.n)}${p.code?`<div class="hint num">${esc(p.code)}</div>`:''}</div><span></span>
+  if(!cart.length){box.innerHTML=`<div><p><b>Заявка пока пустая.</b></p><p class="muted" style="margin-top:6px">Добавьте корма из каталога или просто напишите менеджеру.</p><a class="btn btn-line btn-sm" style="margin-top:14px" href="#catalog" data-close>Перейти в каталог</a></div>`;$('#cartTotal').innerHTML='';}
+  else{box.innerHTML=cart.map((i,ix)=>{const p=byId[i.id];return `<div class="ci"><div class="ci-name">${esc(p.n)}${p.code?`<div class="hint num">${esc(p.code)}</div>`:''}</div>
     <div class="ci-ctrl"><select data-unit="${ix}" aria-label="Объём">${p.u.map(u=>`<option value="${u[0]}" ${u[0]===i.unit?'selected':''}>${esc(u[1])}</option>`).join('')}</select>
     <div class="stepper"><button type="button" data-cq="${ix}" data-d="-1" aria-label="Меньше">−</button><input type="number" inputmode="decimal" min="0.5" step="1" value="${i.qty}" data-qty="${ix}" aria-label="Количество"><button type="button" data-cq="${ix}" data-d="1" aria-label="Больше">+</button></div>
     <button class="rm" type="button" data-rm="${ix}">Убрать</button></div></div>`}).join('');
-    const kg=totalKg();$('#cartTotal').innerHTML=`<span>Позиций: ${cart.length}</span><span class="num">${kg?'Вес ≈ '+fmtKg(kg):''}</span>`}
+    const kg=totalKg();$('#cartTotal').innerHTML=`<span>Позиций: ${cart.length}</span><span class="num">${kg?'Вес около '+fmtKg(kg):''}</span>`}
   const t=orderText();$('#sendWa').href=waLink(t);$('#sendMax').href=CFG.max}
 function orderText(){
   const g=(document.querySelector('input[name="get"]:checked')||{}).value||'';
-  let t='Здравствуйте! Заявка с сайта «Белгородские корма — Башкортостан»:\n';
-  cart.forEach((i,ix)=>{const p=byId[i.id];const u=unitOf(p,i.unit);t+=`${ix+1}. ${p.n}${p.code?' ('+p.code+')':''} — ${u[1]} × ${fmtQty(i.qty)}\n`});
-  const kg=totalKg();if(kg)t+=`Общий вес ≈ ${fmtKg(kg)}\n`;
+  let t='Здравствуйте! Заявка с сайта «Белгородские корма в Башкортостане»:\n';
+  cart.forEach((i,ix)=>{const p=byId[i.id];const u=unitOf(p,i.unit);t+=`${ix+1}. ${p.n}${p.code?' ('+p.code+')':''}: ${u[1]}, ${fmtQty(i.qty)} шт.\n`});
+  const kg=totalKg();if(kg)t+=`Общий вес около ${fmtKg(kg)}\n`;
   const v=id=>$(id).value.trim();
   if(v('#oName'))t+=`Имя: ${v('#oName')}\n`;if(v('#oPhone'))t+=`Телефон: ${v('#oPhone')}\n`;if(v('#oPlace'))t+=`Населённый пункт: ${v('#oPlace')}\n`;
   if(g)t+=`Получение: ${g}\n`;if(v('#oNote'))t+=`Комментарий: ${v('#oNote')}\n`;
@@ -587,7 +689,6 @@ document.addEventListener('click',e=>{
   const m=e.target.closest('[data-more]');if(m){openProduct(+m.dataset.more);return}
   if(e.target.closest('[data-open-cart]')){renderCart();$('#cartDlg').showModal();return}
   const c=e.target.closest('[data-close]');if(c){c.closest('dialog').close();return}
-  const ch=e.target.closest('[data-chip]');if(ch){const d=document.getElementById(ch.dataset.chip);d.open=true;d.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth'});return}
   const st=e.target.closest('[data-step]');if(st){const q=$('#pdQty');q.value=Math.max(1,(+q.value||1)+(+st.dataset.step));return}
   if(e.target.id==='pdAdd'){add(cur.id,$('#pdUnit').value,Math.max(.5,+$('#pdQty').value||1));$('#prodDlg').close();return}
   const cq=e.target.closest('[data-cq]');if(cq){const i=cart[+cq.dataset.cq];i.qty=Math.max(1,+(i.qty+(+cq.dataset.d)).toFixed(1));save();return}
@@ -598,40 +699,55 @@ document.addEventListener('change',e=>{const u=e.target.dataset.unit;if(u!==unde
 ['#oName','#oPhone','#oPlace','#oNote'].forEach(s=>$(s).addEventListener('input',()=>{saveForm();$('#sendWa').href=waLink(orderText())}));
 $$('input[name="get"]').forEach(r=>r.addEventListener('change',()=>{$('#sendWa').href=waLink(orderText())}));
 $$('dialog').forEach(d=>d.addEventListener('click',e=>{if(e.target===d)d.close()}));
-
-function needItems(e){if(!cart.length){e.preventDefault();toast('Добавьте хотя бы один корм в заявку');return true}}
-$('#sendWa').addEventListener('click',e=>{if(needItems(e))return;$('#sendWa').href=waLink(orderText());showMsg('Открываем WhatsApp с текстом заявки. Проверьте и нажмите «Отправить» в мессенджере. Если он не открылся — скопируйте заявку и напишите на 8-987-047-79-95.')});
-$('#sendMax').addEventListener('click',e=>{if(needItems(e))return;copy(orderText()).then(ok=>showMsg(ok?'Текст заявки скопирован. В открывшемся MAX вставьте его в чат с менеджером и отправьте.':'Откройте MAX и напишите менеджеру на номер 8-987-047-79-95. Текст заявки можно скопировать кнопкой ниже.'))});
-$('#copyOrder').addEventListener('click',()=>{if(!cart.length){toast('Заявка пустая');return}copy(orderText()).then(ok=>toast(ok?'Текст заявки скопирован':'Не удалось скопировать — выделите текст вручную'))});
+function needItems(e){if(!cart.length){e.preventDefault();toast('Добавьте хотя бы один товар в заявку');return true}}
+$('#sendWa').addEventListener('click',e=>{if(needItems(e))return;$('#sendWa').href=waLink(orderText());showMsg('Открываем WhatsApp с текстом заявки. Проверьте и нажмите «Отправить». Если он не открылся, скопируйте заявку и напишите на '+CFG.phoneText+'.')});
+$('#sendMax').addEventListener('click',e=>{if(needItems(e))return;copy(orderText()).then(ok=>showMsg(ok?'Текст заявки скопирован. В открывшемся MAX вставьте его в чат с менеджером и отправьте.':'Откройте MAX и напишите менеджеру на номер '+CFG.phoneText+'. Текст заявки можно скопировать кнопкой ниже.'))});
+$('#copyOrder').addEventListener('click',()=>{if(!cart.length){toast('Заявка пустая');return}copy(orderText()).then(ok=>toast(ok?'Текст заявки скопирован':'Не удалось скопировать, выделите текст вручную'))});
 function showMsg(t){const m=$('#orderMsg');m.textContent=t;m.hidden=false}
 $('#copyPhone').addEventListener('click',()=>copy(CFG.phoneText).then(ok=>toast(ok?'Номер скопирован':'Номер: '+CFG.phoneText)));
 
 /* форма консультации */
 function askText(){const v=id=>$(id).value.trim();let t='Здравствуйте! Нужна консультация по кормам.';if(v('#askText'))t+='\n'+v('#askText');if(v('#askName'))t+='\nИмя: '+v('#askName');if(v('#askPhone'))t+='\nТелефон: '+v('#askPhone');return t}
-$('#askForm').addEventListener('submit',e=>{e.preventDefault();const a=document.createElement('a');a.href=waLink(askText());a.target='_blank';a.rel='noopener';document.body.appendChild(a);a.click();a.remove();$('#askHint').textContent='Открываем WhatsApp. Нажмите «Отправить» в мессенджере. Не открылся — позвоните 8-987-047-79-95.'});
-$('#askForm [data-via="max"]').addEventListener('click',()=>{copy(askText()).then(ok=>{$('#askHint').textContent=ok?'Текст скопирован — вставьте его в чат MAX.':'Откройте MAX и напишите на 8-987-047-79-95.'});const a=document.createElement('a');a.href=CFG.max;a.target='_blank';a.rel='noopener';document.body.appendChild(a);a.click();a.remove()});
+function openUrl(u){const a=document.createElement('a');a.href=u;a.target='_blank';a.rel='noopener';document.body.appendChild(a);a.click();a.remove()}
+$('#askForm').addEventListener('submit',e=>{e.preventDefault();openUrl(waLink(askText()));$('#askHint').textContent='Открываем WhatsApp. Нажмите «Отправить» в мессенджере. Не открылся? Позвоните '+CFG.phoneText+'.'});
+$('#askForm [data-via="max"]').addEventListener('click',()=>{copy(askText()).then(ok=>{$('#askHint').textContent=ok?'Текст скопирован, вставьте его в чат MAX.':'Откройте MAX и напишите на '+CFG.phoneText+'.'});openUrl(CFG.max)});
 
-/* поиск */
-$('#q').addEventListener('input',e=>{const q=e.target.value.trim().toLowerCase();let any=0;
-  $$('details.cat').forEach(d=>{let n=0;d.querySelectorAll('.card').forEach(c=>{const ok=!q||c.dataset.s.includes(q);c.hidden=!ok;if(ok)n++});d.hidden=q&&!n;if(q&&n)d.open=true;any+=n});
-  $$('.sec-title').forEach(t=>{let el=t.nextElementSibling,vis=false;while(el&&!el.classList.contains('sec-title')){if(!el.hidden)vis=true;el=el.nextElementSibling}t.hidden=!vis});
-  $('#noRes').hidden=!!any});
+/* поиск по обоим блокам */
+$('#q').addEventListener('input',e=>{const q=e.target.value.trim().toLowerCase();let a=0,b=0;
+  $$('details.grp').forEach(d=>{let n=0;d.querySelectorAll('.row').forEach(r=>{const ok=!q||r.dataset.s.includes(q);r.hidden=!ok;if(ok)n++});d.hidden=!!q&&!n;if(q&&n)d.open=true;a+=n});
+  $$('.part').forEach(p=>{p.hidden=!!q&&![...p.querySelectorAll('details.grp')].some(d=>!d.hidden)});
+  $$('#rawList li').forEach(li=>{const ok=!q||li.dataset.s.includes(q);li.hidden=!ok;if(ok)b++});
+  $$('#rawList .col').forEach(c=>{c.hidden=!!q&&![...c.querySelectorAll('li')].some(l=>!l.hidden)});
+  $('#noRes').hidden=!q||!!a;$('#noRes').innerHTML=b?'В комбикормах ничего не нашли. Есть совпадения в блоке <a class="tlink" href="#raw">«Зерно, жмыхи и добавки»</a>.':'<b>Ничего не нашли.</b> Напишите менеджеру, подберём корм под ваше хозяйство.';$('#noRes2').hidden=!q||!!b});
 
 /* меню */
 $('#menuBtn').addEventListener('click',()=>{const n=$('#nav'),o=n.classList.toggle('open');$('#menuBtn').setAttribute('aria-expanded',o)});
 $$('#nav a').forEach(a=>a.addEventListener('click',()=>{$('#nav').classList.remove('open');$('#menuBtn').setAttribute('aria-expanded','false')}));
 
-/* ссылки */
+/* ссылки и данные продавца */
 $$('[data-tel]').forEach(a=>a.href='tel:+'+CFG.phoneIntl);
 $$('[data-wa]').forEach(a=>a.href=waLink('Здравствуйте! Хочу узнать о кормах «Белгородские корма».'));
 $$('[data-max]').forEach(a=>a.href=CFG.max);
-$('#addr').textContent=CFG.address;$('#hours').textContent=CFG.hours;$('#routeBtn').href=CFG.route;
-
-/* лёгкий параллакс */
-if(!matchMedia('(prefers-reduced-motion:reduce)').matches){const f=$('#field');let tk=false;addEventListener('scroll',()=>{if(tk)return;tk=true;requestAnimationFrame(()=>{const y=scrollY;if(y<900)f.style.transform=`translateY(${y*0.18}px)`;tk=false})},{passive:true})}
+$('#addr').textContent=CFG.address;$('#addr2').textContent=CFG.address;$('#hoursShort').textContent=CFG.hoursShort;
+$('#footAddr').textContent='с. Месягутово, ул. Промышленная, 11Г';
+$('#pickup').textContent='Склад в Месягутово, ул. Промышленная, 11Г, во дворе магазина «Стройдеталь». '+CFG.hoursShort+'.';
+$('#hours').innerHTML=CFG.hours.map(h=>`<dt>${esc(h[0])}</dt><dd>${esc(h[1])}</dd>`).join('');
+$('#routeBtn').href=CFG.route;$('#routeBtn2').href=CFG.route;
 
 renderCatalog();renderCart();updateBadges();
-</script>
 
+/* мягкое появление при прокрутке */
+(function(){const els=$$('.rv');if(reduce||!('IntersectionObserver' in window)){els.forEach(e=>e.classList.add('in'));return}
+  const io=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}}),{rootMargin:'0px 0px -8% 0px',threshold:.08});
+  els.forEach(e=>io.observe(e))})();
+
+/* лёгкий параллакс: фото склада и фото зерна движутся с разной скоростью */
+if(!reduce){const hi=$('#heroImg'),bi=$('#bandImg'),band=$('.band');let tk=false;
+  function par(){const y=scrollY,vh=innerHeight;
+    if(y<vh*1.2)hi.style.transform=`translate3d(0,${(y*0.25).toFixed(1)}px,0)`;
+    const r=band.getBoundingClientRect();if(r.bottom>0&&r.top<vh){const k=(r.top+r.height/2-vh/2)/vh;bi.style.transform=`translate3d(0,${(k*-70).toFixed(1)}px,0)`}
+    tk=false}
+  addEventListener('scroll',()=>{if(!tk){tk=true;requestAnimationFrame(par)}},{passive:true});par()}
+</script>
 </body>
 </html>
