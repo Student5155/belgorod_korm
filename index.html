@@ -208,8 +208,27 @@ h2.display{font-size:clamp(38px,5vw,72px)}
 .raw-tile .tile-stage{aspect-ratio:1/1}
 .raw-tile .bag{width:66%}
 .both{font-size:12px;color:var(--brown);font-weight:600}
+/* названия товаров в сетке: Golos Text, обычный регистр (длинные названия читаются лучше, чем заглавными) */
+.raw-tile{display:flex;flex-direction:column}
+/* под плиткой зерна на любой ширине: название, фасовка, ниже кнопка во всю ширину; у соседних плиток кнопки на одной линии */
+.raw-tile .tile-foot{flex:1;display:flex;flex-direction:column;align-items:stretch;text-align:left;gap:3px}
+.raw-tile .tile-sub{margin-bottom:12px}
+.raw-tile .add-pill{margin-top:auto;width:100%;height:44px;font-size:14.5px}
+.raw-tile .tile-name{font:600 16px/1.3 var(--f-body);text-transform:none;letter-spacing:0}
 .add-pill{grid-row:1/3;grid-column:2;height:38px;padding:0 15px;border-radius:999px;border:1.5px solid var(--green);background:transparent;color:var(--green);font:600 13.5px var(--f-body);cursor:pointer;white-space:nowrap;transition:background-color .2s,color .2s}
 .add-pill:hover{background:var(--green);color:var(--on-green)}
+
+/* телефон: подпись под плиткой в столбик, кнопка «В заявку» во всю ширину внизу, ровно в одну линию у соседних плиток */
+@media (max-width:720px){
+  .tile-foot{grid-template-columns:minmax(0,1fr);gap:3px;padding:10px 2px 0}
+  .tile-name{font-size:17px;line-height:1.1}
+  .tile-sub{font-size:13px}
+  .tile-ico{display:none}
+  .tile{display:flex;flex-direction:column}
+  .raw-tile .tile-name{font-size:14.5px;line-height:1.3}
+  .raw-tile .add-pill{height:42px;font-size:14px}
+  .tile-n{top:8px;right:8px;min-width:26px;height:26px;font-size:12px}
+}
 
 /* 6. дилер: зелёный кадр */
 .dealer{padding-block:var(--sec) 0}
